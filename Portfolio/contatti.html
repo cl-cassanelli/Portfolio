@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Herr+Von+Muellerhoff&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Herr+Von+Muellerhoff&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/pages/contatti.css">
+    <link rel="stylesheet" href="css/all/navbar.css">
+    <script src="https://kit.fontawesome.com/b1e9c08748.js" crossorigin="anonymous"></script>
+    
+    <title>Contatti</title>
+</head>
+
+
+<body>
+
+    <nav>
+        <div class="container">
+
+        <p class="firma">Giuseppe Cassanelli</p>
+
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="chisono.html">Chi sono</a></li>
+            <li><a href="progetti.html">Progetti</a></li>
+            <li><a href="contatti.html">Contatti</a></li>
+            <li><a href="https://www.instagram.com/cl_devofficial/" target="_blank"><i class="fab fa-instagram"></i></a></li>
+            <li><a href="https://www.facebook.com/cldevofficial/" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+        </ul>
+
+        </div>
+    </nav>
+
+    <div class="titolo">
+        <h1>Contattaci</h1>
+        <span></span>
+    </div>
+
+    <form action="php/mail.php" method="post" autocomplete="on">
+
+
+        <div class="input-icons">
+            <i class="fas fa-user icona"></i>
+            <input type="text" name="Name" placeholder="Name" class="name">
+        </div>
+        
+        
+        <div class="input-icons">
+            <i class="fas fa-envelope icona"></i>
+            <input type="email" name="email" placeholder="E-mail" class="email">
+        </div>
+
+
+        <textarea id="richiesta" name="message" rows="8" cols="80" placeholder="Message"></textarea>
+
+        <input type="submit" name="invio" value="Send" class="invio">
+    </form>
+
+    <script src="js/formclick.js"></script>
+
+
+</body>
+
+</html>
