@@ -1,0 +1,40 @@
+html, body{
+    background-color: #8d50ff;
+    height: 100%;
+    margin: 0;
+}
+.contenitore{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    height: 300px;
+    background-color: white;
+    border-radius: 25px;
+    padding: 20px;
+}
+.image{
+    display: block;
+    width: 125px;
+    margin: 0 auto;
+}
+.descrizione{
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    bottom: -10px;  
+}
+button{
+    width: 150px;
+    height: 40px;
+    border: 1px solid #8d50ff;
+    top: 50%;
+    border-radius: 50px;
+    background-color: white;
+    color: #8d50ff;
+    cursor: pointer;
+}
+p{
+    margin-top: -10px;
+    margin-bottom: 20px;
+}

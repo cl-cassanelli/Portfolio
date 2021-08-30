@@ -1,19 +1,29 @@
-var slider_img = document.querySelector('.slider-img');
-var images = ['cl music.png', 'gaminghub.png'];
-var i = 0;
+var slideIndex = 1;
 
-function prev(){
-	if(i <= 0) i = images.length;	
-	i--;
-	return setImg();			 
+showDivs(slideIndex);
+
+function div(n){
+
+    showDivs(slideIndex += n);
+
 }
 
-function next(){
-	if(i >= images.length-1) i = -1;
-	i++;
-	return setImg();			 
-}
+function showDivs(n){
 
-function setImg(){
-	return slider_img.setAttribute('src', "images/instagram/"+images[i]);
+    var i;
+    var x = document.getElementsByClassName('slide');
+
+    if(n > x.length){
+        slideIndex = 1;
+    }
+
+    if(n < 1){
+        slideIndex = x.length;
+    }
+
+    for(i = 0; i < x.length; i++){
+        x[i].style.display='none';
+    }
+
+    x[slideIndex-1].style.display='block';
 }

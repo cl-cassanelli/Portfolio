@@ -1,66 +1,264 @@
 <!DOCTYPE html>
-
 <html lang="it">
+    <head>
+        <title>Home</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css2?family=Herr+Von+Muellerhoff&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Herr+Von+Muellerhoff&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/reset.css">
+        <link rel="stylesheet" href="css/index.css">
+        <script src="https://kit.fontawesome.com/b1e9c08748.js" crossorigin="anonymous"></script>  
+    </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Herr+Von+Muellerhoff&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Herr+Von+Muellerhoff&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/pages/index.css">
-    <link rel="stylesheet" href="css/all/navbar.css">
-    <link rel="stylesheet" href="css/responsive.css">
-    <script src="https://kit.fontawesome.com/b1e9c08748.js" crossorigin="anonymous"></script>
+    <body>
 
-    <title>Home</title>
-</head>
+        <!-- Up arrow -->
+        <div class="sup-container" id="sup-container-visible-id">
+            <i class="fas fa-arrow-up sup"></i>
+        </div>
 
-<body>
-
-    <div class="nav_hamb">
-        <div class="container">
-            <p class="firma">Giuseppe Cassanelli</p>
-            <div class="hamb">
-                <span></span>
-                <span></span>
-                <span></span>
+        <!-- Menu visibile solo da mobile -->
+        <div class="nav_hamb" id="nav_sup">
+            <div class="container">
+                <div class="hamb">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
             </div>
         </div>
-    </div>
 
-    <nav>
-        <div class="container">
-            
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="chisono.html">Chi sono</a></li>
-            <li><a href="progetti.html">Progetti</a></li>
-            <li><a href="contatti.html">Contatti</a></li>
-            <li><a href="https://www.instagram.com/cl_devofficial/" target="_blank"><i class="fab fa-instagram"></i></a></li>
-            <li><a href="https://www.facebook.com/cldevofficial/" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
-        </ul>
+        <!-- Navbar desktop -->
+        <nav>
+            <div class="container">
+                <p class="firma">Giuseppe Cassanelli</p>
+            <ul>
+                <li><a href="#header">Home</a></li>
+                <li><a href="#presentation">Chi sono</a></li>
+                <li><a href="#progetti">Progetti</a></li>
+                <li><a href="#contatti">Contatti</a></li>
+                <li><a href="https://www.instagram.com/cl_devofficial/" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                <li><a href="https://www.facebook.com/cldevofficial/" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+            </ul>
 
-        </div>
-    </nav>
-
-
-    <header>
-        <div class="container">
-            <div id="title">
-                <p class="name">Giuseppe Cassanelli<br><span>Bot Developer</span></p>
-                <div class="bottone"></div>
-                <img src="images/me.png" class="me">
             </div>
-        </div>
-    </header>
+        </nav>
 
-    <script src="js/navbar.js"></script>
+        <!-- Header -->
+        <header id="header">
+            <div class="container-header">
+                <div id="title">
+                    <p class="header-name">Giuseppe Cassanelli<br><span class="header-span">Bot Developer</span></p>
+                    <img src="images/me.png" class="immagine_header">
+                </div>
+            </div>
+            <!-- Scroll Down -->
+            <div class="ovale">
+                <div class="puntino"></div>
+            </div>
+        </header>
 
-</body>
+        <!-- Section Chi Sono -->
+        <section id="presentation">
+            <div class="container">
+                <div id="section1-title">
+                    <div class="section1-presentazione">
+                        <img src="images/mecircle.png" class="section1-img">
+                        <div class="section1-description">
+                            <h2 class="section1-h2">Ciao io sono Giuseppe!</h2>
+                            <p class="section1-description">
+                                Sono un programmatore classe 2005 che nel tempo libero da sfogo all'immaginazione e cerca di creare applicazioni in modo da semplificarsi l'esperienza online. Non mi reputo esperto tantomeno incapace nel programmare, nel 2019 mi venne regalato Arduino Uno e da quel momento ho preso le cose più seriamente. In passato mi sono cimentato nella creazione di un sito, <a href="https://tblog.altervista.org" target="__blank" class="section1-link">tblog.altervista.org</a>, come si evince dal dominio è stato creato con Altervista. Quel progetto sfortunatamente è durato meno del previsto data la mia inattività nel pubblicare articoli quotidianamente. Mediante il tempo libero della quarantena mi sono appassionato alla creazione di bot per Discord e, uno di questi ha avuto successo: <a href="https://discord.com/oauth2/authorize?client_id=840338234236207175&scope=bot&permissions=8" target="__blank" class="section1-link">CL Music</a>.
+                            </p>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
+        <!-- Section Progetti -->
+        <section id="progetti">
+
+            <!-- Titolo Sezione -->
+            <h1 class="titolo-progetti">Progetti</h1>
+            <div class="linea-progetti"></div>
+
+            <div class="container container-progetti">
+
+                <!-- Frecce Slider -->
+                <img src="images/freccia.png" width="20px" class="arrow-destra"onclick="div(1)">
+                <img src="images/freccia.png" width="20px" class="arrow-sinistra" onclick="div(-1)">
+
+                <div class="contenitore">
+
+                    <!-- CL Music Section -->
+                    <div class="content slide" style="width: 100%">            
+
+                        <!-- Immagine Progetto -->
+                        <div class="immagine">
+                            <img src="images/instagram/cl_music.png" class="img-1">
+                        </div>
+
+                        <!-- Contenitore Testo -->
+                        <div class="text-container">
+                            <div class="all">
+                            
+                                <!-- Titolo Progetto -->
+                                <h1 class="titolo-contenitore">CL Music</h1>
+                                <div class="distanza"></div>
+
+                                <!-- Descrizione Progetto -->
+                                <p class="descrizione">Per via della quarantena forzata iniziai a stu-diare la programmazione di bot Discord in Node.js; inizialmente creavo piccole short- &nbsp; cut per automatizzare al massimo i server miei e dei miei amici. Il giorno 07-05-2021 ri- lasciai CL Music, il mio primo ed unico bot &nbsp; di successo, programmato in 5 settimane. &nbsp; Conta 21 comandi suddivisi in: 16 musicali e 7 supplementari, inoltre, le piattaforme di ri-produzione musicale supportate sono You- Tube e Spotify.</p>
+
+                                <!-- Linguaggi Progetto -->
+                                <h2 class="sottotitolo-contenitore">Linguaggi</h2>
+
+                                <div class="percentuale"></div>
+                                <div class="contenitore-linguaggi">
+                                    <div class="JavaScript"></div>
+                                    <p class="testo">JavaScript <span>100%</span></p>
+                                </div>
+                                <div class="contenitore-linguaggi">
+                                    <div class="html"></div>
+                                    <p class="testo">HTML <span>0%</span></p>
+                                </div>
+                                <div class="contenitore-linguaggi">
+                                    <div class="css"></div>
+                                    <p class="testo">CSS <span>0%</span></p>
+                                </div>
+                                <div class="contenitore-linguaggi">
+                                    <div class="php"></div>
+                                    <p class="testo">PHP <span>0%</span></p>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- GamingHub Section-->
+                    <div class="content slide" style="width: 100%">            
+
+                        <!-- Immagine Progetto -->
+                        <div class="immagine">
+                            <img src="images/instagram/gaminghub.png" class="img-1">
+                        </div>
+
+                        <!-- Contenitore Testo -->
+                        <div class="text-container">
+                            <div class="all">
+                            
+                                <!-- Titolo Progetto -->
+                                <h1 class="titolo-contenitore">GamingHub</h1>
+                                <div class="distanza"></div>
+
+                                <!-- Descrizione Progetto -->
+                                <p class="descrizione">GamingHub Security Bot è stata la mia pri-ma vendita riguardante bot privati per ser- &nbsp; ver Discord. Come si deduce dal nome è &nbsp; &nbsp; &nbsp; destinato alla moderazione semi&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; automatica di un server di gaming, con &nbsp; &nbsp; &nbsp; però al suo interno comandi dedicati anche agli utenti, quali i meme, la musica ecc. Il &nbsp; &nbsp; bot è stato sviluppato in Node.js e comple- &nbsp; tato in circa 1 settimana; ringrazio ancora i &nbsp; &nbsp; ragazzi per avermi affidato questo lavoro e &nbsp; per essersi fidati di me.</p>
+
+                                <!-- Linguaggi Progetto -->
+                                <h2 class="sottotitolo-contenitore">Linguaggi</h2>
+
+                                <div class="percentuale"></div>
+                                <div class="contenitore-linguaggi">
+                                    <div class="JavaScript"></div>
+                                    <p class="testo">JavaScript <span>100%</span></p>
+                                </div>
+                                <div class="contenitore-linguaggi">
+                                    <div class="html"></div>
+                                    <p class="testo">HTML <span>0%</span></p>
+                                </div>
+                                <div class="contenitore-linguaggi">
+                                    <div class="css"></div>
+                                    <p class="testo">CSS <span>0%</span></p>
+                                </div>
+                                <div class="contenitore-linguaggi">
+                                    <div class="php"></div>
+                                    <p class="testo">PHP <span>0%</span></p>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Contatti -->
+        <section id="contatti">
+
+            <!-- Titolo Sezione -->
+            <h1 class="titolo-contattami">Contattami</h1>
+            <div class="linea-contattami"></div>
+
+            <!-- Immagine Mail -->
+            <div class="container container-form container-contattami">
+                <img src="images/mail.png" class="form-image" width="650px">
+
+                <!-- Distanza Immagine Testo -->
+                <div class="separator"></div>
+
+                <form action="php/mail.php" method="post" autocomplete="on">
+
+                    <!-- Sezione Nome -->
+                    <div class="input-icons">
+                        <i class="fas fa-user icona"></i>
+                        <input type="text" name="Name" placeholder="Name" class="name1">
+                    </div>
+        
+                    <!-- Sezione Email -->
+                    <div class="input-icons">
+                        <i class="fas fa-envelope icona"></i>
+                        <input type="email" name="email" placeholder="E-mail" class="email">
+                    </div>
+
+                    <!-- Sezione Descrizione -->
+                    <textarea id="richiesta" name="message" rows="8" cols="80" placeholder="Message"></textarea>
+
+                    <!-- Bottone Invio -->
+                    <input type="submit" name="invio" value="Send" class="invio">
+
+                </form>
+            </div>
+
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <div class="container">
+
+                <div class="footer-left">
+                    <p class="firma-footer">Giuseppe Cassanelli</p>
+                    <div class="linea"></div>
+                    <ul class="ul-footer">
+                        <li><a href="#header">Home</a></li>
+                        <li><a href="#presentation">Chi sono</a></li>
+                        <li><a href="#progetti">Progetti</a></li>
+                        <li><a href="#contatti">Contatti</a></li>
+                        <br>
+                        <p class="copy-footer">&copy;2021 Giuseppe Cassanelli. All right reserved.</p>
+                    </ul>
+                </div>
+
+                <div class="footer-right">
+                    <div class="loghi">
+                        <a href="https://www.instagram.com/cl_devofficial/" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.facebook.com/cldevofficial/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://twitter.com/cldevofficial" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a href="https://discord.gg/9rCp9ydNs8" target="_blank"><i class="fab fa-discord"></i></a>
+                        <br>
+                        <p>Support: cldevofficial@gmail.com</p>
+                    </div>
+                </div>
+                
+            </div>
+        </footer>
+
+        <!-- Script -->
+        <script src="js/invisibleBack.js"></script>
+        <script src="js/backHome.js"></script>
+        <script src="js/navbar.js"></script>
+        <script src="js/slider.js"></script>
+
+    </body>
 
 </html>
