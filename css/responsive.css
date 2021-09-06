@@ -1,25 +1,7 @@
+/* Responsive Mobile */
 @media (max-width:767px){
-    .container{
-        width: 90%;
-    }
 
-    #title{
-        display: block;
-        position: absolute;
-        top: 50%;
-        left: 0;
-        transform: translateY(-50%);
-        height: auto;
-    }
-
-    .me{
-        width: 100%;
-    }   
-
-    .name{
-        text-align: center;
-    }
-
+    /* Navbar */
     .hamb{
         visibility: visible;
     }
@@ -49,5 +31,16 @@
     .nav_hamb{
         z-index: 999;
     }
+
+}
+
+/* Tablet Verticali */
+@media (min-width:768px) and (max-width:991px){
+
+
+}
+
+/* Tablet Orizzontali e Laptop */
+@media (min-width:992px) and (max-width:1199px){
 
 }

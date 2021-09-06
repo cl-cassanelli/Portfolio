@@ -2,13 +2,35 @@
 <html lang="it">
     <head>
         <title>Home</title>
+        <style>
+            ::-webkit-scrollbar{
+                width: 10px;
+                
+            }
+            ::-webkit-scrollbar-track{
+                box-shadow: inset 0 0 5px #8d50ff;
+                border-radius: 10px;
+            }
+
+            ::-webkit-scrollbar-thumb{
+                background-color: white;
+                border-radius: 10px;
+            }
+
+            ::-webkit-scrollbar-thumb:hover{
+                background-color: grey;
+            }
+        </style>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="https://fonts.googleapis.com/css2?family=Herr+Von+Muellerhoff&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Herr+Von+Muellerhoff&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="css/reset.css">
         <link rel="stylesheet" href="css/index.css">
+        <link rel="stylesheet" href="css/responsive.css">
+        <link rel="shortcut icon" href="images/favicon.ico">
         <script src="https://kit.fontawesome.com/b1e9c08748.js" crossorigin="anonymous"></script>  
+        <link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@900&display=swap" rel="stylesheet">
     </head>
 
     <body>
@@ -33,21 +55,20 @@
         <nav>
             <div class="container">
                 <p class="firma">Giuseppe Cassanelli</p>
-            <ul>
-                <li><a href="#header">Home</a></li>
-                <li><a href="#presentation">Chi sono</a></li>
-                <li><a href="#progetti">Progetti</a></li>
-                <li><a href="#contatti">Contatti</a></li>
-                <li><a href="https://www.instagram.com/cl_devofficial/" target="_blank"><i class="fab fa-instagram"></i></a></li>
-                <li><a href="https://www.facebook.com/cldevofficial/" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
-            </ul>
-
+                <ul>
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#presentation">Chi sono</a></li>
+                    <li><a href="#progetti">Progetti</a></li>
+                    <li><a href="#contatti">Contatti</a></li>
+                    <li><a href="https://www.instagram.com/cl_devofficial/" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                    <li><a href="https://www.facebook.com/cldevofficial/" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+                </ul>
             </div>
         </nav>
 
         <!-- Header -->
-        <header id="header">
-            <div class="container-header">
+        <section id="header">
+            <div class="container">
                 <div id="title">
                     <p class="header-name">Giuseppe Cassanelli<br><span class="header-span">Bot Developer</span></p>
                     <img src="images/me.png" class="immagine_header">
@@ -57,11 +78,11 @@
             <div class="ovale">
                 <div class="puntino"></div>
             </div>
-        </header>
+        </section>
 
         <!-- Section Chi Sono -->
-        <section id="presentation">
-            <div class="container">
+        <section class="annull" id="presentation">
+            <div class="container-chisono">
                 <div id="section1-title">
                     <div class="section1-presentazione">
                         <img src="images/mecircle.png" class="section1-img">
@@ -77,7 +98,8 @@
         </section>
 
         <!-- Section Progetti -->
-        <section id="progetti">
+        <div class="separatore-navbar" id="progetti"></div>
+        <section>
 
             <!-- Titolo Sezione -->
             <h1 class="titolo-progetti">Progetti</h1>
@@ -184,7 +206,9 @@
         </section>
 
         <!-- Section Contatti -->
-        <section id="contatti">
+        <div class="separatore-navbar" id="contatti"></div>
+
+        <section>
 
             <!-- Titolo Sezione -->
             <h1 class="titolo-contattami">Contattami</h1>
@@ -202,20 +226,23 @@
                     <!-- Sezione Nome -->
                     <div class="input-icons">
                         <i class="fas fa-user icona"></i>
-                        <input type="text" name="Name" placeholder="Name" class="name1">
+                        <input type="text" name="Name" placeholder="Name" class="name1" required='true' minlength="3">
                     </div>
         
                     <!-- Sezione Email -->
                     <div class="input-icons">
                         <i class="fas fa-envelope icona"></i>
-                        <input type="email" name="email" placeholder="E-mail" class="email">
+
+                        <input type="email" name="email" placeholder="E-mail" class="email" required='true'>
+  
                     </div>
 
                     <!-- Sezione Descrizione -->
-                    <textarea id="richiesta" name="message" rows="8" cols="80" placeholder="Message"></textarea>
+                    <textarea id="richiesta" name="message" rows="8" cols="80" placeholder="Message" required='true' minlength="5"></textarea>
 
                     <!-- Bottone Invio -->
-                    <input type="submit" name="invio" value="Send" class="invio">
+                    <input type="submit" name="invio" value="Send" class="invio" onclick="errorMessage()">
+                    <input name="invio" value="Messaggio Inviato" class="dopo-invio-hidden">
 
                 </form>
             </div>
@@ -225,27 +252,35 @@
         <!-- Footer -->
         <footer>
             <div class="container">
-
+                
+                <!-- Footer Left -->
                 <div class="footer-left">
+                    <!-- Firma -->
                     <p class="firma-footer">Giuseppe Cassanelli</p>
+                    <!-- Divisorio -->
                     <div class="linea"></div>
+                    <!-- Elenco -->
                     <ul class="ul-footer">
                         <li><a href="#header">Home</a></li>
                         <li><a href="#presentation">Chi sono</a></li>
                         <li><a href="#progetti">Progetti</a></li>
                         <li><a href="#contatti">Contatti</a></li>
                         <br>
+                        <!-- Copyright -->
                         <p class="copy-footer">&copy;2021 Giuseppe Cassanelli. All right reserved.</p>
                     </ul>
                 </div>
 
+                <!-- Footer Right -->
                 <div class="footer-right">
+                    <!-- Immagini -->
                     <div class="loghi">
                         <a href="https://www.instagram.com/cl_devofficial/" target="_blank"><i class="fab fa-instagram"></i></a>
                         <a href="https://www.facebook.com/cldevofficial/" target="_blank"><i class="fab fa-facebook-f"></i></a>
                         <a href="https://twitter.com/cldevofficial" target="_blank"><i class="fab fa-twitter"></i></a>
                         <a href="https://discord.gg/9rCp9ydNs8" target="_blank"><i class="fab fa-discord"></i></a>
                         <br>
+                        <!-- Mail -->
                         <p>Support: cldevofficial@gmail.com</p>
                     </div>
                 </div>
@@ -254,10 +289,15 @@
         </footer>
 
         <!-- Script -->
-        <script src="js/invisibleBack.js"></script>
+        <!-- <script src="js/invisibleBack.js"></script> -->
         <script src="js/backHome.js"></script>
+        <!-- <script src="js/control.js"></script> -->
         <script src="js/navbar.js"></script>
         <script src="js/slider.js"></script>
+        <script src="js/error.js"></script>
+
+        
+
 
     </body>
 

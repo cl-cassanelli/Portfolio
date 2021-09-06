@@ -4,14 +4,12 @@ html, body{
     height: 100%;
     scroll-behavior: smooth;
 }
-header{
-    height: 100%;
-    position: relative;
-    width: 100%;
-}
 section{
     height: 100%;
     position: relative;
+}
+.annull{
+    height: 840px;
 }
 .container{
     width: 1200px;
@@ -27,7 +25,10 @@ section{
     line-height: 0;
     clear: both;
 }
-
+.separatore-navbar{
+    width: 100%;
+    height: 130px;
+}
 
 /* Up arrow*/
 .sup-container{
@@ -118,6 +119,7 @@ nav{
     left: 0;
     z-index: 998;
     transition: 0.3s;
+    background-color: #7447C7;
 }
 .firma{
     position: absolute;
@@ -157,12 +159,6 @@ nav ul li a span{
 
 
 /* Header */
-.container-header{
-    width: 1100px;
-    height: 100%;
-    margin:0 auto;
-    position: relative;
-}
 #title{
     display: flex;
     justify-content: space-between;
@@ -215,7 +211,7 @@ nav ul li a span{
     top: 30%;
     left: 50%;
     transform: translate(-50%, -30%);
-    animation: animazione 1s infinite;
+    animation: animazione 1.5s infinite;
 }
 @keyframes animazione{
     0%,100%{
@@ -228,6 +224,12 @@ nav ul li a span{
 
 
 /* Section Chi Sono */
+.container-chisono{
+    width: 1200px;
+    height: 840px;
+    position: relative;
+    margin: 0 auto;
+}
 #section1-title{
     position: absolute;
     top: 50%;
@@ -242,9 +244,9 @@ nav ul li a span{
     align-items: center;
 }
 .section1-img{
-    width: 500px;
+    width: 200px;
     display: block;
-    margin-right: 70px;
+    margin-right: 40px;
 }
 .section1-description{
     color: white;
@@ -270,8 +272,6 @@ nav ul li a span{
 }
 .section1-link:hover{
     color: #fcbda4;
-    font-size: 24px;
-
 }
 
 
@@ -449,6 +449,7 @@ nav ul li a span{
 }
 .form-image{
     margin-right: -150px;
+    margin-left: -150px;
 }
 .separator{
     width: 150px;
@@ -525,6 +526,32 @@ textarea{
     outline: none;
 }
 .invio:hover{
+    transition: 0.4s;
+    background-color: #333333;
+    color: #e6e6e6;
+}
+.invio-hidden{
+    display: none;
+}
+
+.dopo-invio-hidden{
+    display: none;
+}
+
+.dopo-invio-visible{
+    display: block;
+    width: 350px;
+    text-align: center;
+    background: #e6e6e6;
+    border-radius: 25px;
+    height: 50px;
+    border: none;
+    margin-top: 10px;
+    font-family: 'Montserrat', sans-serif;
+    color: #8d50ff;
+    outline: none;
+}
+.dopo-invio-visible:hover{
     transition: 0.4s;
     background-color: #333333;
     color: #e6e6e6;

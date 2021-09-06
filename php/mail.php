@@ -21,6 +21,6 @@ if($nome && $email && $messaggio){
 
         header('location:../error.html'); //rimando l'utente sulla pagina specificata
 
-        }
+}
 
 ?>
