@@ -40,7 +40,16 @@ p{
 }
 
 /* Responsive Mobile */
-@media (max-width:767px){
+
+@media (min-width:260px) and (max-width:350px){
+
+    .contenitore{
+        width: 230px;
+        height: 300px;
+    }
+}
+
+@media (min-width:350px) and (max-width:767px){
 
     .contenitore{
         width: 300px;

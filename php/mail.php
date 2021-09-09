@@ -15,11 +15,11 @@ if($nome && $email && $messaggio){
         $headersClient  .= "Message: $messaggio" . "\r\n";
     mail($to,$msg,$headersClient);
 
-    header("location: $grazie");//rimando l'utente sulla pagina specificata nella variabile
+    header("location: $grazie");//in caso di successo rimando l'utente sulla pagina specificata nella variabile
 
 }else{
 
-        header('location:../error.html'); //rimando l'utente sulla pagina specificata
+        header('location:../error.html'); //in caso di errore rimando l'utente sulla pagina specificata
 
 }
 

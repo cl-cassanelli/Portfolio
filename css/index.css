@@ -62,7 +62,6 @@ section{
     height: 80px;
     position: fixed;
     z-index: 998;
-
 }
 .hamb{
     width: 35px;
@@ -364,7 +363,7 @@ nav ul li a span{
 	margin-top: 15px;
 	margin-left: auto;
 	margin-right: auto;
-	word-break: break-all;
+
 	font-size: 16px;
 	line-height: 24px;
 }
@@ -630,4 +629,69 @@ footer{
 .loghi a i{
     margin-bottom: 10px;
     margin-right: 15px;
+}
+/* Responsive Mobile */
+@media (max-width:767px){
+
+    /* Navbar */
+    .hamb{
+        visibility: visible;
+    }
+    nav{
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.8);
+        transition: all 0.5s ease-out;
+        top: -100%;
+    }
+    nav ul{
+        width: 100%;
+        text-align: center;
+    }
+    nav ul li{
+        float: none;
+        margin-left: 0;
+        width: 100%;
+        display: block;
+        font-size: 30px;
+        margin-top: 20px;
+        
+    }
+    .nav_hamb{
+        z-index: 999;
+    }
+    ::-webkit-scrollbar{
+        display: none;
+    }
+
+    /* Header */
+    .container-mobile{
+        display: block;
+        width: 90%;
+        height: 100%;
+        position: relative;
+    }
+    #title{
+        display: block;
+    }
+    .header-name{
+        text-align: center;
+    }
+
+}
+
+
+
+
+
+
+
+
+/* Tablet Verticali */
+@media (min-width:768px) and (max-width:991px){
+
+}
+
+/* Tablet Orizzontali e Laptop */
+@media (min-width:992px) and (max-width:1250px){
+
 }
