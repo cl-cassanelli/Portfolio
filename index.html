@@ -26,7 +26,6 @@
         <link href="https://fonts.googleapis.com/css2?family=Herr+Von+Muellerhoff&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="css/reset.css">
         <link rel="stylesheet" href="css/index.css">
-        <link rel="stylesheet" href="css/responsive.css">
         <link rel="shortcut icon" href="images/favicon.ico">
         <script src="https://kit.fontawesome.com/b1e9c08748.js" crossorigin="anonymous"></script>  
         <link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@900&display=swap" rel="stylesheet">
@@ -58,7 +57,7 @@
                     <li><a href="#header">Home</a></li>
                     <li><a href="#presentation">Chi sono</a></li>
                     <li><a href="#progetti">Progetti</a></li>
-                    <li><a href="#contatti">Contatti</a></li>
+                    <!-- <li><a href="#contatti">Contatti</a></li> -->
                     <li><a href="https://www.instagram.com/cl_devofficial/" target="_blank"><i class="fab fa-instagram"></i></a></li>
                     <li><a href="https://www.facebook.com/cldevofficial/" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
                 </ul>
@@ -108,7 +107,7 @@
 
         <!-- Section Progetti -->
         <div class="separatore-navbar" id="progetti"></div>
-        <section>
+        <section id="progetti">
 
             <!-- Titolo Sezione -->
             <h1 class="titolo-progetti">Progetti</h1>
@@ -224,50 +223,6 @@
             </div>
         </section>
 
-        <!-- Section Contatti -->
-        <div class="separatore-navbar" id="contatti"></div>
-
-        <section>
-
-            <!-- Titolo Sezione -->
-            <h1 class="titolo-contattami">Contattami</h1>
-            <div class="linea-contattami"></div>
-
-            <!-- Immagine Mail -->
-            <div class="container container-form container-contattami">
-                <img src="images/mail/mail.png" class="form-image" width="650px">
-
-                <!-- Distanza Immagine Testo -->
-                <div class="separator"></div>
-
-                <form action="php/mail.php" method="post" autocomplete="on">
-
-                    <!-- Sezione Nome -->
-                    <div class="input-icons">
-                        <i class="fas fa-user icona"></i>
-                        <input type="text" name="Name" placeholder="Name" class="name1" required='true' minlength="3">
-                    </div>
-        
-                    <!-- Sezione Email -->
-                    <div class="input-icons">
-                        <i class="fas fa-envelope icona"></i>
-
-                        <input type="email" name="email" placeholder="E-mail" class="email" required='true'>
-  
-                    </div>
-
-                    <!-- Sezione Descrizione -->
-                    <textarea id="richiesta" name="message" rows="8" cols="80" placeholder="Message" required='true' minlength="5"></textarea>
-
-                    <!-- Bottone Invio -->
-                    <input type="submit" name="invio" value="Send" class="invio" onclick="errorMessage()">
-                    <input name="invio" value="Messaggio Inviato" class="dopo-invio-hidden">
-
-                </form>
-            </div>
-
-        </section>
-
         <!-- Footer -->
         <footer>
             <div class="container">
@@ -308,14 +263,10 @@
         </footer>
 
         <!-- Script -->
-        <!-- <script src="js/invisibleBack.js"></script> -->
+        <script src="js/invisibleBack.js"></script>
         <script src="js/backHome.js"></script>
-        <!-- <script src="js/control.js"></script> -->
         <script src="js/navbar.js"></script>
         <script src="js/slider.js"></script>
-        <script src="js/error.js"></script>
-
-        
 
 
     </body>
