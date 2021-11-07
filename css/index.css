@@ -132,9 +132,6 @@ nav{
 .nav-modificata{
     background-color: #7447c7;
 }
-.li-lingua{
-    float: none;
-}
 nav ul{
     position: absolute;
     right: 0;
@@ -158,18 +155,6 @@ nav ul li a:hover{
 nav ul li a span{
     width: 2px;
 }
-/* .flag{
-    cursor: pointer;
-    width: 10px;
-    margin-left: 5px;
-}
-#li-lingua{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-} */
-
-
 
 
 /* Header */
@@ -509,7 +494,7 @@ footer{
 .loghi a{
     color: white;
 }
-.loghi a:hover{
+.loghi a :hover{
     color: #fcbda4;
 }
 .loghi a i{
