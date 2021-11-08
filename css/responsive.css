@@ -75,5 +75,7 @@
 
 /* Tablet Orizzontali e Laptop */
 @media (min-width:992px) and (max-width:1250px){
-
+    body{
+        background-color: red;
+    }
 }
