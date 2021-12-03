@@ -82,6 +82,9 @@ nav{
 .nav-right ul li a:hover{
     color: #fcbda4;
 }
+.mobile-menu{
+    display: none;
+}
 
 /* Home */
 header{
@@ -380,10 +383,6 @@ footer{
     font-family: 'Montserrat', sans-serif;
     margin-top: 15px;
 }
-.lang{
-    padding: 3px 6px;
-    border: solid 1px white;
-}
 .loghi p{
     font-family: 'Montserrat', sans-serif;
     font-size: 15px;
@@ -399,34 +398,132 @@ footer{
     color: #fcbda4;
 }
 .hamb{
-    display: flex;
     justify-content: space-between;
     align-items: center;
     flex-direction: column;
     width: 23px;
-    height: 14px;
+    height: 16px;
     margin: auto;
     display: none;
 }
 .hamb span{
-    width: 100%;
+    width: 23px;
     height: 2px;
     background-color: white;
+    transition: all 0.3s ease-out;
+
+}
+.hamb_span1{
+    top: 50%;
+    position: absolute;
+    transform: rotate(45deg);
+}
+.hamb_span2{
+    display: none;
+}
+.hamb_span3{
+    top: 50%;
+    position: absolute;
+    transform: rotate(-45deg);
 }
 .navmod{
     height: 100vh;
 }
-/* Responsive Mobile */
-@media (max-width:767px){
 
-    .nav-right, section, footer, header{
+/* Responsive Mobile */
+@media (max-width: 767px){
+    section, footer{
+        height: 100vh;
         display: none;
     }
-    /* Navbar */
     .firma{
         font-size: 35px;
+    }
+    .mobile-menu{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      margin: auto;
+    }
+    nav{
+        height: 9.5vh;
+    }
+    .nav-bar{
+      margin-right: 50px;
+      font-size: 25px;
+    }
+    .nav-right{
+        margin: 0;
+    }
+    .nav-right ul{
+      position: fixed;
+      width: 100%;
+      height: 90.5vh;
+      background: #8d50ff;
+      top: 9.5vh;
+      left: -100%;
+      text-align: center;
+      transition: all .5s;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+    .nav-right ul li{
+      display: flex;
+      flex-direction: column;
+      line-height: 50px;
+      margin-right: 0px;
+    }
+    nav ul li a{
+      font-size: 20px;
+      padding: 10px 15px;
     }
     .hamb{
         display: flex;
     }
+    /* Home */
+    header{
+        height: 100vh;
+    }
+    header .description{
+        justify-content: center;
+        flex-direction: column;
+        margin: 0;
+    }
+    header p{
+        font-size: 35px;
+        text-align: center;
+        margin-bottom: 15px;
+    }
+    header p span{
+        font-size: 19px;
+    }
+    header img{
+        width: 375px;
+        margin: auto;
+    }
+    .ovale{
+        display: none;
+    }
+
+    /* Chi sono */
+    #chi-sono, .chisono{
+        display: flex;
+        flex-direction: column;
+    }
+    .chisono .right h2{
+        font-size: 28px;
+        margin-bottom: 5px;
+    }
+    .chisono .right p{
+        font-size: 17px;
+        text-align: center;
+        margin: 0 15px;
+    }
+    .chisono img{
+        display: none;
+    }
+
 }

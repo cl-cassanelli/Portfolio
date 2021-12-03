@@ -7,12 +7,20 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="css/style.css">
         <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
-        <script src="https://kit.fontawesome.com/b1e9c08748.js" crossorigin="anonymous"></script>  
+        <script src="https://kit.fontawesome.com/b1e9c08748.js" crossorigin="anonymous"></script> 
+
+        <!-- MetaTags -->
+	    <meta name="keywords" content="portfolio, giuseppecassanelli, giuseppe cassanelli, cassanelli giuseppe">
+	    <meta name="description" content="Sono un programmatore classe 2005 che nel tempo libero da sfogo all'immaginazione e cerca di creare applicazioni in modo da semplificarsi l'esperienza online. Non mi reputo esperto tantomeno incapace nel programmare...">
+	    <meta name="robots" content="index, follow">
+
+        <!-- Google MetaTags --> 
         <meta property="og:title" content="Giuseppe Cassanelli"/>
         <meta property="og:description" content="Sono un programmatore classe 2005 che nel tempo libero da sfogo all'immaginazione e cerca di creare applicazioni in modo da semplificarsi l'esperienza online. Non mi reputo esperto tantomeno incapace nel programmare..."/>
 	    <meta property="og:url" content="https://giuseppecassanelli.it"/>
 	    <meta property="og:site_name" content="Giuseppe Cassanelli"/>
 	    <meta property="og:image" content="https://giuseppecassanelli.it/img/mecircle.png" />
+
         <title>Home</title>
     </head>
 
@@ -33,17 +41,21 @@
             <div class="nav-right">
                 <!-- List -->
                 <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#chi-sono">Chi sono</a></li>
-                    <li><a href="#progetti">Progetti</a></li>
+                    <li><a href="">Home</a></li>
+                    <li><a id="c" href="#chi-sono">Chi sono</a></li>
+                    <li><a id="p" href="#progetti">Progetti</a></li>
                     <li><a href="https://www.instagram.com/cl_devofficial/" target="_blank"><i class="fab fa-instagram"></i></a></li>
                     <li><a href="https://www.facebook.com/cldevofficial/" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
                 </ul>
             </div>
-            <div class="hamb">
-                <span></span>
-                <span></span>
-                <span></span>
+            <!-- Nav-Mobile -->
+            <div class="mobile-menu">
+                <div class="hamb">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+
             </div>
         </nav>
 
@@ -201,8 +213,6 @@
                     <li><a href="#">Home</a></li>
                     <li><a href="#chi-sono">Chi sono</a></li>
                     <li><a href="#progetti">Progetti</a></li>
-                    <li><a href="" class="lang">IT</a></li>
-                    <li><a href="en.html">EN</a></li>
                     <br>
                     <!-- Copyright -->
                     <p class="copy">&copy;2021 Giuseppe Cassanelli. All right reserved.</p>
@@ -227,6 +237,15 @@
         <script src="js/slider.js"></script>
         <script src="js/up-arrow.js"></script>
         <script src="js/navbar.js"></script>
+        <!-- Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-P9MJDW83Y5"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-P9MJDW83Y5');
+        </script>
 
     </body>
 </html> 
