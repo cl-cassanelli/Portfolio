@@ -527,3 +527,273 @@ footer{
     }
 
 }
+
+/* Responsive Test */
+@media (min-width: 1131px) and (max-width: 1215px){
+    .immagine{
+        width: 600px;
+        height: 600px;
+    }
+    .immagine img{
+        width: 320px;
+        height: 477.8px;
+    }
+    .text-container{
+        width: 380px;
+        height: 600px;
+    }
+
+    .text-container h1{
+        font-size: 48px;
+    }
+    .descrizione{
+        font-size: 15px;
+        line-height: 21px;
+    }
+    .text-container h2{
+        font-size: 28px;
+    }
+
+}
+@media (min-width: 1051px) and (max-width: 1130px){
+    .immagine{
+        width: 560px;
+        height: 560px;
+    }
+    .immagine img{
+        width: 280px;
+        height: 437.8px;
+    }
+    .text-container{
+        width: 340px;
+        height: 560px;
+    }
+
+    .text-container h1{
+        font-size: 44px;
+    }
+    .descrizione{
+        font-size: 14px;
+        line-height: 19px;
+    }
+    .text-container h2{
+        font-size: 26px;
+    }
+
+    .JavaScript{
+        width: 7px;
+        height: 7px;
+    }
+    .html{
+        width: 7px;
+        height: 7px;
+    }
+    .css{
+        width: 7px;
+        height: 7px;
+    }
+    .php{
+        width: 7px;
+        height: 7px;
+    }
+    .testo{
+        font-size: 11.5px;
+    }
+
+}
+@media (min-width: 971px) and (max-width: 1050px){
+    .immagine{
+        width: 520px;
+        height: 520px;
+    }
+    .immagine img{
+        width: 240px;
+        height: 397.8px;
+    }
+    .text-container{
+        width: 300px;
+        height: 520px;
+        padding: 30px;
+    }
+
+    .text-container h1{
+        font-size: 40px;
+    }
+    .descrizione{
+        font-size: 13px;
+        line-height: 18px;
+    }
+    .text-container h2{
+        font-size: 23px;
+    }
+    .percentuale{
+        width: 200px;
+        height: 7px;
+    }
+    .JavaScript{
+        width: 6px;
+        height: 6px;
+    }
+    .html{
+        width: 6px;
+        height: 6px;
+    }
+    .css{
+        width: 6px;
+        height: 6px;
+    }
+    .php{
+        width: 6px;
+        height: 6px;
+    }
+    .testo{
+        font-size: 10.5px;
+    }
+}
+@media (min-width: 891px) and (max-width: 970px){
+    .immagine{
+        width: 480px;
+        height: 480px;
+    }
+    .immagine img{
+        width: 200px;
+        height: 357.8px;
+    }
+    .text-container{
+        width: 260px;
+        height: 480px;
+        padding: 25px;
+    }
+    .text-container h1{
+        font-size: 36px;
+    }
+    .descrizione{
+        font-size: 11px;
+        line-height: 17px;
+    }
+    .text-container h2{
+        font-size: 21px;
+    }
+    .percentuale{
+        width: 180px;
+        height: 7px;
+    }
+    .JavaScript{
+        width: 6px;
+        height: 6px;
+    }
+    .html{
+        width: 6px;
+        height: 6px;
+    }
+    .css{
+        width: 6px;
+        height: 6px;
+    }
+    .php{
+        width: 6px;
+        height: 6px;
+    }
+    .testo{
+        font-size: 10.5px;
+    }
+}
+
+@media (min-width: 811px) and (max-width: 890px){
+    .immagine{
+        width: 440px;
+        height: 440px;
+    }
+    .immagine img{
+        width: 160px;
+        height: 317.8px;
+    }
+    .text-container{
+        width: 220px;
+        padding: 20px;
+        height: 440px;
+    }
+
+    .text-container h1{
+        font-size: 32px;
+    }
+    .descrizione{
+        font-size: 8.5px;
+        line-height: 16px;
+    }
+    .text-container h2{
+        font-size: 19px;
+    }
+    .percentuale{
+        width: 120px;
+        height: 5px;
+    }
+    .JavaScript{
+        width: 6px;
+        height: 6px;
+    }
+    .html{
+        width: 6px;
+        height: 6px;
+    }
+    .css{
+        width: 6px;
+        height: 6px;
+    }
+    .php{
+        width: 6px;
+        height: 6px;
+    }
+    .testo{
+        font-size: 10.5px;
+    }
+}
+
+@media (min-width: 767px) and (max-width: 810px){
+    .immagine{
+        width: 400px;
+        height: 400px;
+    }
+    .immagine img{
+        width: 120px;
+        height: 277.8px;
+    }
+    .text-container{
+        width: 180px;
+        height: 400px;
+        padding: 20px;
+    }
+    .text-container h1{
+        font-size: 28px;
+    }
+    .descrizione{
+        font-size: 7px;
+        line-height: 15px;
+    }
+    .text-container h2{
+        font-size: 17px;
+    }
+    .percentuale{
+        width: 100px;
+        height: 4.5px;
+    }
+    .JavaScript{
+        width: 5px;
+        height: 5px;
+    }
+    .html{
+        width: 5px;
+        height: 5px;
+    }
+    .css{
+        width: 5px;
+        height: 5px;
+    }
+    .php{
+        width: 5px;
+        height: 5px;
+    }
+    .testo{
+        font-size: 8px;
+    }
+}

@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Herr+Von+Muellerhoff&family=Roboto:wght@300;400&display=swap');
+*{
+	border: 0;
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    line-height: 1;
+	list-style: none;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+}
+
+html, body{
+    height: 100%;
+    background-color: #8d50ff;
+}
+a {
+    display: flex;
+}
+.block{
+    display: flex;
+    margin: 7px;
+}
+.block:last-of-type{
+    margin-bottom: 0;
+}
+.center{
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.social {
+    width: 46px;
+    width: 46px;
+    background-color: blanchedalmond;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.social img {
+    width: 25px;
+    height: 25px;
+}
+
+.ig {
+    background-color: #CE0090;
+}
+.fb {
+    background-color: #3B5998;
+}
+.tl {
+    background-color: #0088CC;
+}
+.tw {
+    background-color: #1DCAFF;
+}
+.ds {
+    background-color: #7289D9;
+}
+.gh {
+    background-color: #AD5C51;
+}
+.ml {
+    background-color: #FF2E00;
+}
+
+.txt{
+    width: 150px;
+    height: 46px;
+    border-radius: 3px;
+    text-transform: uppercase;
+    margin-left: 7px;
+    cursor: pointer;
+}
+
+.igt {
+    background-color: #EA8FC8;
+}
+.fbt {
+    background-color: #8B9DC3;
+}
+.tlt {
+    background-color: #7CB3CF;
+}
+.twt {
+    background-color: #C0DEED;
+}
+.dst {
+    background-color: #98A5D2;
+}
+.ght {
+    background-color: #F4CBB2;
+}
+.mlt {
+    background-color: #FF8282;
+}
