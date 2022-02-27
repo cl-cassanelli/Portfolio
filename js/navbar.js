@@ -1,7 +1,6 @@
-const nav = document.querySelector('.mobile-menu').addEventListener('click', click);
-const cA = document.querySelector('#c').addEventListener('click', c);
-const pA = document.querySelector('#p').addEventListener('click', p);
-
+document.querySelector('.mobile-menu').addEventListener('click', click);
+document.querySelector('#c').addEventListener('click', c);
+document.querySelector('#p').addEventListener('click', p);
 
 function click() {
     var cambio1 =  document.querySelector('.hamb span:first-of-type');

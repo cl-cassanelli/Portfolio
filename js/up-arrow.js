@@ -5,7 +5,9 @@ button.onclick = () => {
 }   
 
 window.onscroll = () => {
-    if (document.body.scrollTop >= 250 || document.documentElement.scrollTop >= 250) {
+    if (document.body.scrollTop >= 250 
+        || 
+        document.documentElement.scrollTop >= 250) {
         button.classList.add('visible');
     } else {
         button.classList.remove('visible');
