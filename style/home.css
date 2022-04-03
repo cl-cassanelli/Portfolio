@@ -1,0 +1,634 @@
+html, body{
+    height: auto;
+    background-color: var(--bg-color);
+    color: var(--color);
+    scroll-behavior: smooth;
+}
+
+/* Navbar */
+nav{
+    height: 10vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    background-color: var(--bg-color);
+    z-index: 999;
+}
+nav .left, nav .right{
+    margin: auto;
+}
+
+
+.mobile-menu{
+    display: none;
+}
+.hamb {
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    width: 23px;
+    height: 16px;
+    margin: auto;
+    display: none;
+}
+.hamb span {
+    width: 23px;
+    height: 2px;
+    transition: all 0.3s ease-out;
+    background-color: var(--color);
+}
+.hamb_span1 {
+    top: 50%;
+    position: absolute;
+    transform: rotate(45deg);
+}
+.hamb_span2 {
+    display: none;
+}
+.hamb_span3 {
+    top: 50%;
+    position: absolute;
+    transform: rotate(-45deg);
+    z-index: 1;
+}
+
+.logo{
+    font-family: "Herr Von Muellerhoff";
+    font-size: 35px;
+    font-weight: 100;
+    margin: 0 23px;
+}
+ul li{
+    float: left;
+    margin: 23px;
+}
+ul li a{
+    color: var(--color);    
+}
+ul li a:hover{
+    color: var(--puple);
+}
+.mode {
+    float: right;
+    position: relative;
+    margin: auto;
+    width: 42px;
+    height: 22px;
+    background: #F1F2F4;
+    border-radius: 20px;
+    cursor: pointer;
+}
+.mode:after {
+    content: "☀️";
+    position: absolute;
+    top: 0;
+    left: 4px;
+    font-size: 14px;
+    height: 22px;
+    line-height: 23px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+.mode.active:after {
+    content: "🌛";
+    transform: translateX(20px);
+}
+.mode.active {
+    background: #0771ca;
+}
+.mode span {
+    position: absolute;
+    z-index: 1;
+    margin: 2px;
+    display: block;
+    width: 18px;
+    height: 18px;
+    background: white;
+    border-radius: 50%;
+    box-shadow: 0 1px 3px rgb(0 0 0 / 10%);
+    transform: translateX(20px);
+    transition: all 0.4s ease;
+}
+.mode.active span {
+    transform: translateX(0);
+}
+
+/* Header */
+#chisono{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#chisono .right{
+    padding-left: 90px;
+    max-width: 55%;
+}
+.profile-picture{
+    border: 3px solid var(--puple);
+    border-radius: 100%;
+    width: 450px;
+}
+#chisono .right h3{
+    font-size: 50px;
+    font-weight: 400;
+}
+#chisono .right h5{
+    font-size: 24px;
+    font-weight: 400;
+    color: var(--puple);
+    margin-bottom: 25px;
+}
+#chisono .right p{
+    font-size: 17px;
+    opacity: 0.8;
+}
+
+/* Progetti */
+#progetti{
+    height: 150vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#progetti .container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 0 150px;
+}
+.element{
+    width: 350px;
+    height: 225px;
+    background-color: #707070;
+    margin: 40px 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    opacity: 50%;
+    transition: 0.5s;
+    flex-direction: column;
+}
+.element:hover{
+    filter: blur(8px);
+}
+.bot{
+    width: 140px;
+}
+.omegle{
+    max-width: 260px;
+}
+.car-salon-bg{
+    background-image: url("../img/car-salon-bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.car-salon{
+    width: 180px;
+}
+.password-grabber-bg{
+    background-image: url("../img/password-grabber-bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.password-grabber{
+    width: 280px;
+}
+
+/* istruzione */
+#istruzione {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.proj-setup{
+    margin: auto 3%;
+}
+#istruzione h2{
+    font-size: 24px;
+    font-weight: 500;
+}
+#istruzione p{
+    font-size: 14px;
+    opacity: .8;
+}
+.card-setup{
+    margin: 45px 0;
+}
+#istruzione .container{
+    margin-top: 13px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.card {
+    background-color: var(--bg-card);
+    width: 367px;
+    padding: 30px;
+    border-radius: 15px;
+    margin: 13px 15px;
+}
+.language-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.language-card div {
+    width: 85%;
+    margin-left: 20px;
+}
+.language-card img{
+    width: 64px;
+}
+.mobile-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.mobile-header button {
+    display: none;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+.skill-card {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.skill-card img{
+    width: 61px;
+}
+.progress-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.progress-bar{
+    width: 160px;
+    height: 8px;
+    border-radius: 4px;
+    margin-right: 15px;
+    background-color: #262626;
+}
+.progress-value {
+    height: 8px;
+    border-radius: 4px;
+}
+.value-text{
+    width: 33px;
+}
+.arrow-icon{
+    background: none;
+    width: 30px;
+    height: 30px;
+    color: #fff;
+}
+.arrow-icon-reverse{
+    transform: rotate(180deg);
+}
+/* Contact */
+.cont-card{
+    width: 700px;
+    background-color: #0a0a0a;
+    margin-top: 47px;
+    padding: 45px 55px 35px;
+    border-radius: 28px;
+}
+.cont-card p{
+    font-size: 14px;
+    opacity: 0.8;
+}
+.email-in{
+    margin-top: 18px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+}
+.button-ctn{
+    width: 185px;
+    height: 45px;
+    background-image: linear-gradient(45deg, var(--puple), #d400ff);
+    color: #000;
+    font-weight: 600;
+    border-radius: 9px;
+    cursor: pointer;
+    user-select: none;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#name, #email, #object{
+    background-color: #0f0f0f;
+    width: 380px;
+    border-radius: 7px;
+    padding: 10px 20px;
+    color: var(--color);
+    height: 50px;
+    border: 2px solid #707070;
+    margin: 10px auto;
+}
+.validate-input{
+    position: relative;
+}
+.validate-input-text{
+    position: absolute;
+    max-width: 70%;    
+    background-color: rgba(0,0,0,.4);
+    border: 1px solid #c80000;
+    border-radius: 13px;
+    padding: 4px 25px 4px 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 8px;
+    pointer-events: none;
+    color: #c80000;
+    font-size: 12px;
+    line-height: 1.4;
+    text-align: left;
+}
+.validate-input-icon {
+    display: block;
+    position: absolute;
+    color: #c80000;
+    font-size: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 13px;
+}
+
+#object{
+    height: 100px;
+    margin-bottom: 20px;
+}
+.email-cont{
+    width: 65%;
+    background-color: rgba(0,0,0,.4);
+    padding: 8px 20px;
+    border: 2px solid #707070;
+    border-radius: 7px;
+}
+.email-wrapper {
+    margin-top: 18px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+#button-send{
+    width: 150px;
+    height: 45px;
+    background-image: linear-gradient(45deg, var(--puple), #d400ff);
+    color: #000;
+    font-weight: 600;
+    border-radius: 9px;
+    cursor: pointer;
+    user-select: none;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    margin-bottom: 18px;
+}
+
+.hidden{
+    display: none;
+}
+
+/* Footer */
+footer {
+    width: 100%;
+    height: 15.5vh;
+    background-color: var(--bg-card);
+    display: flex;
+    justify-content: space-between;
+}
+.footer-left, .footer-right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+}
+.firma {
+    font-family: 'Herr Von Muellerhoff', cursive;
+    font-size: 40px;
+    color: #fff;
+}
+.footer-left .linea {
+    width: 1px;
+    height: 75px;
+    background-color: white;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+.footer-left ul li {
+    float: left;
+    margin-left: 25px;
+}
+.footer-left ul li a {
+    color: #fff;
+}
+.loghi a {
+    color: #fff;
+}
+.loghi a i {
+    margin-bottom: 10px;
+    margin-right: 15px;
+    color: #fff;
+}
+.copy {
+    margin-left: 25px;
+    font-size: 15px;
+    font-family: 'Montserrat', sans-serif;
+    margin-top: 15px;
+    color: #fff;
+}
+
+@media screen and (max-width: 1380px) {
+    #chisono{
+        margin: 0 100px;
+    }
+    #chisono .right{
+        padding-left: 60px;
+    }
+}
+
+@media screen and (max-width: 1120px){
+    #chisono{
+        margin: 0 50px;
+    }
+    #chisono .right{
+        padding-left: 40px;
+    }
+    .profile-picture{
+        width: 45%;
+    }
+}
+
+
+
+@media screen and (max-width: 890px){
+
+    .ovale{
+        display: none;
+    }
+
+    /* Navbar */
+    .mobile-menu {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+    }
+    ul{
+        position: fixed;
+        width: 100%;
+        height: 92vh;
+        background: var(--bg-color);
+        top: 8vh;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .hamb {
+        display: flex;
+    }
+
+    /* Chi Sono */
+    #chisono{
+        height: auto;
+        flex-direction: column;
+        margin: 0 27px;
+        padding-top: 100px;
+    }
+    #chisono img {
+        width: 50%;
+        display: block;
+    }
+    #chisono .right {
+        max-width: 100%;
+        padding-left: 0px;
+    }
+    #chisono .right h3 {
+        font-size: 37px;
+        padding-top: 39px;
+    }
+    #chisono .right h5 {
+        font-size: 18px;
+        margin-bottom: 17px;
+    }
+    #chisono .right p{
+        font-size: 14px;
+    }
+
+    /* istruzione */
+    #istruzione{
+        display: block;
+    }
+    .mobile-header {
+        background-color: var(--bg-card);
+        padding: 10px;
+        border-radius: 8px;
+    }
+    .mobile-header button{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .card-setup{
+        margin: 45px 5%;
+    }
+    .cards-closed {
+        height: 0;
+        overflow: hidden;
+    }
+    #istruzione .container {
+        margin-top: 0;
+    }
+
+    .proj-setup .button-center{
+        display: none;
+    }
+    .proj-setup .hidden{
+        display: block;
+    }
+
+    .skill-card{
+        padding: 15px;
+    }
+    .skill-card img{
+        width: 45px;
+    }
+
+    .proj-setup{
+        margin: 0;
+    }
+
+    .email-cont{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .center-container{
+        margin: 0 5%;
+    }
+
+    .email-wrapper{
+        justify-content: center;
+        flex-direction: column;
+        flex-wrap: nowrap;
+    }
+
+    #name, #email, #object {
+        width: 370px;
+    }
+    
+    .button-ctn {
+        width: 150px;
+        margin-top: 25px;
+    }
+   
+}
+
+@media screen and (max-width: 650px) {
+    .cont-card{
+        padding: 0;
+        background-color: var(--bg-color);
+    }
+
+    .cont-card p:nth-of-type(2), .email-wrapper{
+        display: none;
+    }
+}
+
+
+@media screen and (max-width: 450px) {
+    #contact{
+        display: none;
+    }
+    #chisono img {
+        width: 65%;
+    }
+}
+
+@media screen and (max-width: 320px){
+    .card-setup {
+        margin: 45px 0;
+    }
+    
+}

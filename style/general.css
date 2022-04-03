@@ -1,0 +1,166 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap");
+
+/* Elementi Generali */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-family: "Poppins",sans-serif;
+    resize: none;
+}
+
+/* Colori Base */
+:root{
+    --bg-color: #fff;
+    --puple: #9100FF;
+    --color:#000;
+    --border-button: #9100FF;
+    --bg-button: rgb(145, 0, 255, 42%);
+    --bg-card: #969696;
+    --scroll-bar: #9100FF;
+    --oval: #000;
+}
+
+/* Colori DarkMode*/
+.dark-mode{
+    --bg-color: #0F0F0F;
+    --color:#fff;
+    --bg-card: #0a0a0a;
+    --oval: #fff;
+}
+
+/* Scroll Bar */
+::-webkit-scrollbar {
+    width: 8px;
+    background-color: var(--bg-color);
+}  
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(var(--bg-color), var(--scroll-bar), var(--bg-color)) ;
+}
+
+.main-container{
+    margin: 100px 10%;
+}
+.center-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Titoli */
+.title{
+    width: 100%;
+}
+h4 {
+    font-size: 35px;
+    font-weight: 700;
+}
+.title hr {
+    color: #707070;
+    margin: auto;
+    width: 82%;
+    margin-top: 10px;
+}
+
+/* Bottoni */
+.button{
+    cursor: pointer;
+    padding: 10px 15px;
+    border: 3px solid var(--border-button);
+    border-radius: 5px;
+    background-color: var(--bg-button);
+    color: var(--color);
+    user-select: none;
+}
+.button i{
+    font-size: 12px;
+}
+.button-center{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+/* Ovale */
+.ovale::before {
+    display: block;
+    content: 'Scorri verso il basso';
+    color: var(--oval);
+    width: 200px;
+    text-align: center;
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 17px;
+}
+.ovale {
+    bottom: 15px;
+    left: 50%;
+    position: absolute;
+    width: 20px;
+    height: 26px;
+    border: 1px solid var(--oval);
+    border-radius: 25px;
+    transform: translateX(-50%);
+}
+.puntino {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    border-radius: 100%;
+    background-color: var(--oval);
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -30%);
+    animation: oval 1.5s infinite;
+}
+@keyframes oval{
+    0%,100%{
+        top: 30%;
+    }
+    50%{
+        top: 70%;
+    }
+}
+
+/* Progress Bar Element */
+.html{background-color: #E54C21;width: 100%;animation: w100 2s;}
+.ejs{background-color: #B4CA65;width: 100%;animation: w100 2s;}
+.css{background-color: #264DE4;width: 100%;animation: w100 2s;}
+.github{background-color: #FFFFFF;width: 100%;animation: w100 2s;}
+.office{background-color: #D83B01;width: 100%;animation: w100 2s;}
+.vscode{background-color: #34A5F1;width: 100%;animation: w100 2s;}
+.win7{background-color: #35B4E8;width: 100%;animation: w100 2s;}
+.win10{background-color: #0078D6;width: 100%;animation: w100 2s;}
+.win11{background-color: #0078D4;width: 100%;animation: w100 2s;}
+.nodejs{background-color: #026E00;width: 90%;animation: w90 2s;}
+.altervista{background-color: #FFA200;width: 90%;animation: w90 2s;}
+.npm{background-color: #CB3837;width: 90%;animation: w90 2s;}
+.js{background-color: #F7DF1E;width: 85%;animation: w85 2s;}
+.adobexd{background-color: #FF61F6;width: 80%;animation: w80 2s;}
+.macmonteray{background-color: #c22ab6;width: 80%;animation: w80 2s;}
+.git{background-color: #F05033;width: 75%;animation: w75 2s;}
+.arduino{background-color: #19989E;width: 70%;animation: w70 2s;}
+.cpp{background-color: #00599D;width: 60%;animation: w60 2s;}
+.amazon{background-color: #FFA724;width: 50%;animation: w50 2s;}
+.photoshop{background-color: #31A8FF;width: 50%;animation: w50 2s;}
+.php{background-color: #4F5D95;width: 40%;animation: w40 2s;}
+.java{background-color: #ED2025;width: 40%;animation: w40 2s;}
+.wordpress{background-color: #21759B;width: 35%;animation: w35 2s;}
+.kalilinux{background-color: #696969;width: 30%;animation: w30 2s;}
+
+@keyframes w100{0%{width: 0%;}100%{width: 100%;}}
+@keyframes w90{0%{width: 0%;}100%{width: 90%;}}
+@keyframes w85{0%{width: 0%;}100%{width: 85%;}}
+@keyframes w80{0%{width: 0%;}100%{width: 80%;}}
+@keyframes w75{0%{width: 0%;} 100%{width: 75%;}}
+@keyframes w70{0%{width: 0%;}100%{width: 70%;}}
+@keyframes w60{0%{width: 0%;}100%{width: 60%;}}
+@keyframes w50{0%{width: 0%;}100%{width: 50%;}}
+@keyframes w40{0%{width: 0%;}100%{width: 40%;}}
+@keyframes w35{0%{width: 0%;}100%{width: 35%;}}
+@keyframes w30{0%{width: 0%;}100%{width: 30%;}}

@@ -1,205 +1,273 @@
 <!DOCTYPE html>
-<html lang="it">
-
+<html lang="en" data-theme="light">
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="css/style.css">
-        <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
-        <script src="https://kit.fontawesome.com/b1e9c08748.js" crossorigin="anonymous"></script> 
-
-        <!-- MetaTags -->
-	    <meta name="keywords" content="portfolio, giuseppecassanelli, giuseppe cassanelli, cassanelli giuseppe">
-	    <meta name="description" content="Ciao, io sono Giuseppe Cassanelli. Sono un programmatore classe 2005 che nel tempo libero da sfogo all'immaginazione e cerca di creare applicazioni in modo da semplificarsi l'esperienza online. Non mi reputo esperto tantomeno incapace nel programmare...">
-	    <meta name="robots" content="index, follow">
-
-        <!-- Google MetaTags --> 
-        <meta property="og:title" content="Giuseppe Cassanelli"/>
-        <meta property="og:description" content="Ciao, io sono Giuseppe Cassanelli. Sono un programmatore classe 2005 che nel tempo libero da sfogo all'immaginazione e cerca di creare applicazioni in modo da semplificarsi l'esperienza online. Non mi reputo esperto tantomeno incapace nel programmare..."/>
-	    <meta property="og:url" content="https://giuseppecassanelli.it"/>
-	    <meta property="og:site_name" content="Giuseppe Cassanelli"/>
-	    <meta property="og:image" content="https://giuseppecassanelli.it/img/mecircle.png" />
-
-        <title>Home</title>
+        <script src="https://kit.fontawesome.com/a7c0a41ac4.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="./style/home.css">
+        <link rel="stylesheet" href="./style/general.css">
+        <title>Document</title>
     </head>
 
     <body>
-
-        <!-- Up arrow -->
-        <div class="sup-container">
-            <i class="fas fa-arrow-up"></i>
-        </div>
-
+        
         <!-- Navbar -->
         <nav>
-            <!-- Nav-left -->
-            <div class="nav-left">
-                <p class="firma">Giuseppe Cassanelli</p>
+            <!-- Left -->
+            <div class="left">
+                <!-- Logo -->
+                <h1 class="logo">Giuseppe Cassanelli</h1>
             </div>
-            <!-- Nav-Right -->
-            <div class="nav-right">
-                <!-- List -->
+            <!-- Right -->
+            <div class="right">
+                <!-- Lista -->
                 <ul>
-                    <li><a href="">Home</a></li>
-                    <li><a id="c" href="#chi-sono">Chi sono</a></li>
-                    <li><a id="p" href="#progetti">Progetti</a></li>
-                    <li><a href="https://www.instagram.com/cl_devofficial/" target="_blank"><i class="fab fa-instagram"></i></a></li>
-                    <li><a href="https://www.facebook.com/cldevofficial/" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#progetti">Progetti</a></li>
+                    <li><a href="#istruzione">Istruzione</a></li>
+                    <li><a href="#contact">Contattami</a></li>
+                    <li><div class="mode" onclick="toggleTheme()" id="mode-switcher"><span></span></div></li>
                 </ul>
-            </div>
-            <!-- Nav-Mobile -->
-            <div class="mobile-menu">
-                <div class="hamb">
-                    <span></span>
-                    <span></span>
-                    <span></span>
+                <!-- Mobile-Menu -->
+                <div class="mobile-menu">
+                    <div class="hamb">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
                 </div>
             </div>
         </nav>
 
-        <!-- Home -->
-        <header>
-            <!-- Description -->
-            <div class="description">
-                <!-- Title -->
-                <p>Giuseppe Cassanelli<br><span>Website Developer</span></p>
-                <!-- Image -->
-                <img src="img/me.webp" alt="giuseppe cassanelli">
+        <!-- Chi sono -->
+        <header id="chisono">
+            <!-- Foto -->
+            <img src="./img/me.png" class="profile-picture" alt="">
+            <!-- Right -->
+            <div class="right">
+                <!-- Descrizione -->
+                <h3>Giuseppe Cassanelli</h3>
+                <h5>WEB DESIGNER & DEVELOPER</h5>
+                <p>Sono Giuseppe, nato a Bisceglie (BT) nel 2005, ho vissuto a Roma per diversi anni quando nel 2011 ci siamo trasferiti in Puglia. 
+                    Credo di essere sempre stato portato per l’informatica, ma solo quando ricevetti per regalo Arduino Uno presi le cose più seriamente. 
+                    Grazie ad esso ho iniziato a studiare le basi della programmazione, ampliando sempre più le mie conoscenze. Ora sto studiando informatica 
+                    a Molfetta e sono al terzo anno. Non so bene cosa voglio fare dopo la laurea, non mi sento molto portato per lo studio, ma il mio sogno è 
+                    quello di iscrivermi al corso di Ingegneria Informatica presso l'università.
+                </p>
             </div>
-            <!-- Scroll Down -->
+            <!-- Ovale -->
             <div class="ovale">
                 <div class="puntino"></div>
             </div>
         </header>
 
-        <!-- Chi sono -->
-        <section id="chi-sono">
-            <!-- Container -->
-            <div class="chisono" >
-                <!-- Left -->
-                <div class="left">
-                    <!-- Image -->
-                    <img src="img/mecircle.webp">
-                </div>
-                <!-- Right -->
-                <div class="right">
-                    <!-- Title -->
-                    <h2>Ciao, io sono Giuseppe!</h2>
-                    <!-- Description -->
-                    <p>
-                        Sono un programmatore classe 2005 che nel tempo libero da sfogo all'immaginazione e cerca di creare 
-                        applicazioni in modo da semplificarsi l'esperienza online. Non mi reputo esperto tantomeno incapace 
-                        nel programmare, nel 2019 mi venne regalato Arduino Uno e da quel momento ho preso le cose più seriamente. 
-                        In passato mi sono cimentato nella creazione di un sito, 
-                        <a href="https://tblog.altervista.org" target="__blank">tblog.altervista.org</a>, 
-                        come si evince dal dominio è stato creato con Altervista. Quel progetto sfortunatamente è durato meno del previsto 
-                        data la mia inattività nel pubblicare articoli quotidianamente. Mediante il tempo libero della quarantena mi sono 
-                        appassionato alla creazione di bot per Discord e, uno di questi ha avuto successo: 
-                        <a href="https://discord.com/oauth2/authorize?client_id=840338234236207175&scope=bot&permissions=8" target="__blank">CL Music</a>.
-                    </p>
-                </div>
-            </div>
-        </section>
-
         <!-- Progetti -->
-        <section id="progetti">
-            <!-- Container -->
-            <div class="progetti">
-                <!-- Titolo Sezione -->
-                <h1 class="title">Progetti</h1>
-                <div class="linea"></div>
-                <!-- Container Progetti -->
-                <div class="container-progetti">
-                    <!-- Freccia Slider -->
-                    <img src="img/freccia.webp" width="20px" class="arrow-sinistra" onclick="div(-1)">
-                    <!-- CL Music Section -->
-                    <div class="slide">
-                        <!-- Blocco Immagine -->
-                        <div class="immagine">
-                            <!-- Immagine -->
-                            <img src="img/cl_music.webp" alt="">
-                        </div>
-                        <!-- Blocco Testo -->
-                        <div class="text-container">
-                            <!-- Titolo Progetto -->
-                            <h1>CL Music</h1>
-                            <div class="distanza"></div>
-                            <!-- Descrizione Progetto -->
-                            <p class="descrizione">
-                                Per via della quarantena forzata iniziai a studiare la programmazione di bot Discord in Node.js; inizialmente creavo piccole 
-                                shortcut per automatizzare al massimo i server e aumentando la sicurezza. Il giorno 07-05-2021 rilasciai CL Music, il mio primo 
-                                ed unico bot di successo, programmato in 5 settimane. Conta 21 comandi suddivisi in: 16 musicali e 7 supplementari, inoltre, le 
-                                piattaforme di riproduzione musicale supportate sono YouTube e Spotify.
-                            </p>
-                            <!-- Linguaggi Progetto -->
-                            <h2>Linguaggi</h2>
-                            <div class="percentuale"></div>
-                            <div class="contenitore-linguaggi">
-                                <div class="JavaScript"></div>
-                                <p class="testo">JavaScript <span>100%</span></p>
-                            </div>
-                            <div class="contenitore-linguaggi">
-                                <div class="html"></div>
-                                <p class="testo">HTML <span>0%</span></p>
-                            </div>
-                            <div class="contenitore-linguaggi">
-                                <div class="css"></div>
-                                <p class="testo">CSS <span>0%</span></p>
-                            </div>
-                            <div class="contenitore-linguaggi">
-                                <div class="php"></div>
-                                <p class="testo">PHP <span>0%</span></p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- GamingHub Section -->
-                    <div class="slide">
-                        <!-- Blocco Immagine -->
-                        <div class="immagine">
-                            <!-- Immagine -->
-                            <img src="img/gaminghub.webp" alt="">
-                        </div>
-                        <!-- Blocco Testo -->
-                        <div class="text-container">
-                            <!-- Titolo Progetto -->
-                            <h1>GamingHub</h1>
-                            <div class="distanza"></div>
-                            <!-- Descrizione Progetto -->
-                            <p class="descrizione">
-                                GamingHub Security Bot è stata la mia prima vendita riguardante bot privati per server Discord. Come si deduce dal nome è 
-                                destinato alla moderazione semiautomatica di un server di gaming, con però al suo interno comandi dedicati anche agli utenti, 
-                                quali i meme, la musica ecc. Il bot è stato sviluppato in Node.js e completato in circa 1 settimana; ringrazio ancora i ragazzi 
-                                per avermi affidato questo lavoro e per essersi fidati di me. Link server discord: <a href="https://discord.gg/SCyBNCJ5cR">discord.gg/SCyBNCJ5cR</a> 
-                            </p>
-                            <!-- Linguaggi Progetto -->
-                            <h2>Linguaggi</h2>
-                            <div class="percentuale"></div>
-                            <div class="contenitore-linguaggi">
-                                <div class="JavaScript"></div>
-                                <p class="testo">JavaScript <span>100%</span></p>
-                            </div>
-                            <div class="contenitore-linguaggi">
-                                <div class="html"></div>
-                                <p class="testo">HTML <span>0%</span></p>
-                            </div>
-                            <div class="contenitore-linguaggi">
-                                <div class="css"></div>
-                                <p class="testo">CSS <span>0%</span></p>
-                            </div>
-                            <div class="contenitore-linguaggi">
-                                <div class="php"></div>
-                                <p class="testo">PHP <span>0%</span></p>
-                            </div>
+        <!-- <section id="progetti">
+
+            <div class="title">
+                <h4>Progetti</h4>
+                <hr>
+            </div>
+
+            <div class="container">
+
+                <div class="element">
+                    <img src="img/cl_music.png" class="bot" alt="">
+                </div>
+    
+                <div class="element">
+                    <img src="img/gaminghub.png" class="bot" alt="">
+                </div>
+
+                <div class="element">
+                    <img src="img/logo_omegle.png" class="omegle" alt="">
+                </div>
+
+                <div class="element car-salon-bg">
+                    <img src="img/car-salon-logo.png" class="car-salon" alt="">
+                </div>
+    
+                <div class="element password-grabber-bg">
+                    <img src="img/password-grabber.png" class="password-grabber" alt="">
+                </div>
+
+            </div>
+
+            <a class="button proj" onclick="toggleViewProj()">Mostra Altro <i class="fas fa-chevron-down"></i></a>
+            
+        </section> -->
+
+        <!-- Istruzione -->
+        <section id="istruzione">
+
+            <div class="main-container">
+
+                <h4>Istruzione</h4>
+                <div class="proj-setup">
+
+                    <!-- Languages -->
+                    <div class="card-setup">
+                        <header class="mobile-header">
+                            <p class="subtitle">Languages</p>
+                            <button onclick="mobileBtn('lang-1')">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="arrow-icon lang-1"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 13l-3 3m0 0l-3-3m3 3V8m0 13a9 9 0 110-18 9 9 0 010 18z"></path></svg>                             
+                            </button>
+                        </header>
+                        <div class="container cards-closed lang-1">
+                            <div class="card language-card"><img src="img/istruzione/lang/it.png" alt=""><div><h2>Italiano</h2><p>Lingua Nativa</p></div></div>
+                            <div class="card language-card"><img src="img/istruzione/lang/eng.png" alt=""><div><h2>Inglese</h2><p>Livello Base</p></div></div>
+                            <div class="card language-card"><img src="img/istruzione/lang/fr.png" alt=""><div><h2>Francese</h2><p>Conoscenze Informali</p></div></div>
                         </div>
                     </div>
-                    <!-- Freccia Slider -->
-                    <img src="img/freccia.webp" width="20px" class="arrow-destra"onclick="div(1)">
+
+                    <!-- Frontend development -->
+                    <div class="card-setup">
+                        <header class="mobile-header">
+                            <p>Frontend development</p>
+                            <button onclick="mobileBtn('front-2')">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="arrow-icon front-2"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 13l-3 3m0 0l-3-3m3 3V8m0 13a9 9 0 110-18 9 9 0 010 18z"></path></svg>                             
+                            </button>
+                        </header>
+                        <div class="container cards-closed front-2">
+                            <div class="card skill-card"><img src="img/istruzione/skill/html.png" alt=""><div><h2>HTML 5</h2><div class="progress-wrapper"><div class="progress-bar"><div class="progress-value html"></div></div><p class="value-text">100%</p></div></div></div>
+                            <div class="card skill-card"><img src="img/istruzione/skill/ejs.png" alt=""><div><h2>EJS</h2><div class="progress-wrapper"><div class="progress-bar"><div class="progress-value ejs"></div></div><p class="value-text">100%</p></div></div></div>
+                            <div class="card skill-card"><img src="img/istruzione/skill/css.png" alt=""><div><h2>CSS</h2><div class="progress-wrapper"><div class="progress-bar"><div class="progress-value css"></div></div><p class="value-text">100%</p></div></div></div>
+                            <div class="card skill-card"><img src="img/istruzione/skill/javascript.png" alt=""><div><h2>JavaScript</h2><div class="progress-wrapper"><div class="progress-bar"><div class="progress-value js"></div></div><p class="value-text">85%</p></div></div></div>
+                        </div>
+                    </div>
+
+                    <!-- Backend development -->
+                    <div class="card-setup">
+                        <header class="mobile-header">
+                            <p>Backend development</p>
+                            <button onclick="mobileBtn('back-3')">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="arrow-icon back-3"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 13l-3 3m0 0l-3-3m3 3V8m0 13a9 9 0 110-18 9 9 0 010 18z"></path></svg>                             
+                            </button>
+                        </header>
+                        <div class="container cards-closed back-3">
+                            <div class="card skill-card"><img src="img/istruzione/skill/nodejs.png" alt=""><div><h2>Node.js</h2><div class="progress-wrapper"><div class="progress-bar"><div class="progress-value nodejs"></div></div><p class="value-text">90%</p></div></div></div>
+                            <div class="card skill-card"><img src="img/istruzione/skill/php.png" alt=""><div><h2>PHP</h2><div class="progress-wrapper"><div class="progress-bar"><div class="progress-value php"></div></div><p class="value-text">40%</p></div></div></div>
+                        </div>
+                    </div>
+
+                    <!-- Software development -->
+                    <div class="card-setup hidden">
+                        <header class="mobile-header">
+                            <p>Software development</p>
+                            <button onclick="mobileBtn('soft-4')">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="arrow-icon soft-4"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 13l-3 3m0 0l-3-3m3 3V8m0 13a9 9 0 110-18 9 9 0 010 18z"></path></svg>                             
+                            </button>
+                        </header>
+                        <div class="container cards-closed soft-4">
+                            <div class="card skill-card"><img src="img/istruzione/skill/arduinoide.png" alt=""><div><h2>Arduino IDE</h2><div class="progress-wrapper"><div class="progress-bar"><div class="progress-value arduino"></div></div><p class="value-text">70%</p></div></div></div>
+                            <div class="card skill-card"><img src="img/istruzione/skill/cpp.png" alt=""><div><h2>C++</h2><div class="progress-wrapper"><div class="progress-bar"><div class="progress-value cpp"></div></div><p class="value-text">60%</p></div></div></div>
+                            <div class="card skill-card"><img src="img/istruzione/skill/java.png" alt=""><div><h2>Java</h2><div class="progress-wrapper"><div class="progress-bar"><div class="progress-value java"></div></div><p class="value-text">40%</p></div></div></div>
+                        </div>
+                    </div>
+
+                    <!-- Dev technologies -->
+                    <div class="card-setup hidden">
+                        <header class="mobile-header">
+                            <p>Dev technologies</p>
+                            <button onclick="mobileBtn('dev-5')">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="arrow-icon dev-5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 13l-3 3m0 0l-3-3m3 3V8m0 13a9 9 0 110-18 9 9 0 010 18z"></path></svg>                             
+                            </button>
+                        </header>
+                        <div class="container cards-closed dev-5">
+                            <div class="card skill-card"><img src="img/istruzione/skill/github.png" alt=""><div><h2>GitHub</h2><div class="progress-wrapper"><div class="progress-bar"><div class="progress-value github"></div></div><p class="value-text">100%</p></div></div></div>
+                            <div class="card skill-card"><img src="img/istruzione/skill/npm.png" alt=""><div><h2>NPM</h2><div class="progress-wrapper"><div class="progress-bar"><div class="progress-value npm"></div></div><p class="value-text">90%</p></div></div></div>
+                            <div class="card skill-card"><img src="img/istruzione/skill/git.png" alt=""><div><h2>Git</h2><div class="progress-wrapper"><div class="progress-bar"><div class="progress-value git"></div></div><p class="value-text">75%</p></div></div></div>
+                            <div class="card skill-card"><img src="img/istruzione/skill/amazon.png" alt=""><div><h2>Amazon Aff</h2><div class="progress-wrapper"><div class="progress-bar"><div class="progress-value amazon"></div></div><p class="value-text">50%</p></div></div></div>
+                        </div>
+                    </div>
+
+                    <!-- Software -->
+                    <div class="card-setup hidden">
+                        <header class="mobile-header">
+                            <p>Software</p>
+                            <button onclick="mobileBtn('soft-6')">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="arrow-icon soft-6"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 13l-3 3m0 0l-3-3m3 3V8m0 13a9 9 0 110-18 9 9 0 010 18z"></path></svg>                             
+                            </button>
+                        </header>
+                        <div class="container cards-closed soft-6">
+                            <div class="card skill-card"><img src="img/istruzione/skill/office365.png" alt=""><div><h2>Office 365</h2><div class="progress-wrapper"><div class="progress-bar"><div class="progress-value office"></div></div><p class="value-text">100%</p></div></div></div>
+                            <div class="card skill-card"><img src="img/istruzione/skill/vscode.png" alt=""><div><h2>VS Code</h2><div class="progress-wrapper"><div class="progress-bar"><div class="progress-value vscode"></div></div><p class="value-text">100%</p></div></div></div>
+                            <div class="card skill-card"><img src="img/istruzione/skill/altervista.png" alt=""><div><h2>Altervista</h2><div class="progress-wrapper"><div class="progress-bar"><div class="progress-value altervista"></div></div><p class="value-text">90%</p></div></div></div>
+                            <div class="card skill-card"><img src="img/istruzione/skill/adobexd.png" alt=""><div><h2>Adobe XD</h2><div class="progress-wrapper"><div class="progress-bar"><div class="progress-value adobexd"></div></div><p class="value-text">80%</p></div></div></div>
+                            <div class="card skill-card"><img src="img/istruzione/skill/photoshop.png" alt=""><div><h2>Photoshop</h2><div class="progress-wrapper"><div class="progress-bar"><div class="progress-value photoshop"></div></div><p class="value-text">50%</p></div></div></div>
+                            <div class="card skill-card"><img src="img/istruzione/skill/wordpress.png" alt=""><div><h2>WordPress</h2><div class="progress-wrapper"><div class="progress-bar"><div class="progress-value wordpress"></div></div><p class="value-text">35%</p></div></div></div>
+                        </div>
+                    </div>
+
+                    <!-- Operating systems -->
+                    <div class="card-setup hidden">
+                        <header class="mobile-header">
+                            <p>Operating systems</p>
+                            <button onclick="mobileBtn('os-7')">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="arrow-icon os-7"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 13l-3 3m0 0l-3-3m3 3V8m0 13a9 9 0 110-18 9 9 0 010 18z"></path></svg>                             
+                            </button>
+                        </header>
+                        <div class="container cards-closed os-7">
+                            <div class="card skill-card"><img src="img/istruzione/skill/win11.png" alt=""><div><h2>Windows 11</h2><div class="progress-wrapper"><div class="progress-bar"><div class="progress-value win11"></div></div><p class="value-text">100%</p></div></div></div>
+                            <div class="card skill-card"><img src="img/istruzione/skill/win10.png" alt=""><div><h2>Windows 10</h2><div class="progress-wrapper"><div class="progress-bar"><div class="progress-value win10"></div></div><p class="value-text">100%</p></div></div></div>
+                            <div class="card skill-card"><img src="img/istruzione/skill/win7.png" alt=""><div><h2>Windows 7</h2><div class="progress-wrapper"><div class="progress-bar"><div class="progress-value win7"></div></div><p class="value-text">100%</p></div></div></div>
+                            <div class="card skill-card"><img src="img/istruzione/skill/macmonteray.png" alt=""><div><h2>MacOS Monteray</h2><div class="progress-wrapper"><div class="progress-bar"><div class="progress-value macmonteray"></div></div><p class="value-text">80%</p></div></div></div>
+                            <div class="card skill-card"><img src="img/istruzione/skill/kalilinux.png" alt=""><div><h2>Kali Linux</h2><div class="progress-wrapper"><div class="progress-bar"><div class="progress-value kalilinux"></div></div><p class="value-text">30%</p></div></div></div>
+                        </div>
+                    </div>
+
+                    <!-- Button -->
+                    <div class="button-center">
+                        <a class="button ist" onclick="toggleViewIst()">Mostra Altro <i class="fas fa-chevron-down"></i></a>
+                    </div>
+
+                </div>
+            </div>            
+        </section>
+
+        <!-- Contattami -->
+        <section id="contact">
+            <div class="main-container">
+                <h4>Contattami</h4>
+                <div class="center-container">
+                    <div class="cont-card">
+                        <p>Scrivimi una mail</p>
+                        <form class="email-in">
+
+                            <div class="validate-input">
+                                <span class='validate-input-text namejs'>Il nome è richiesto!</span>
+                                <input type="text" name="name" id="name" placeholder="Nome e Cognome...">
+                                <span class='validate-input-icon namejs'><i class="fa-solid fa-circle-exclamation"></i></span>
+                            </div>
+
+                            <div class="validate-input">
+                                <span class='validate-input-text emailjs'>La mail è richiesta!</span>
+                                <input type="email" name="email" id="email" placeholder="Email...">
+                                <span class='validate-input-icon emailjs'><i class="fa-solid fa-circle-exclamation"></i></span>
+                            </div>
+
+                            <div class="validate-input">
+                                <span class='validate-input-text objectjs'>L'oggetto è richiesto!</span>
+                                <textarea name="object" id="object" cols="30" rows="10" placeholder="Oggetto..."></textarea>
+                                <span class='validate-input-icon objectjs'><i class="fa-solid fa-circle-exclamation"></i></span>
+                            </div>
+                            <input type="button" onclick="buttonClick()" id="button-send" value="Invia">
+                            
+                        </form>
+                
+                        <p>Copia la mail</p>
+                        <div class="email-wrapper">
+                            <div class="email-cont">info@giuseppecassanelli.it</div>
+                            <a onclick="copyToClipboard()" class="button-ctn">Copia la mail</a>
+                        </div>
+                        
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- Footer -->
+
         <footer>
             <!-- Footer Left -->
             <div class="footer-left">
@@ -212,44 +280,42 @@
                     <li><a href="#">Home</a></li>
                     <li><a href="#chi-sono">Chi sono</a></li>
                     <li><a href="#progetti">Progetti</a></li>
+                    <li><a href="/social.html">Social</a></li>
                     <br>
                     <!-- Copyright -->
-                    <p class="copy">&copy;2021 Giuseppe Cassanelli. All right reserved.</p>
+                    <p class="copy">©2021 Giuseppe Cassanelli. All right reserved.</p>
                 </ul>
             </div>
             <!-- Footer Right -->
             <div class="footer-right">
                 <!-- Loghi -->
                 <div class="loghi">
-                    <a href="https://www.instagram.com/cl_devofficial/" target="_blank"><i class="fab fa-instagram"></i></a>
-                    <a href="https://www.facebook.com/cldevofficial/" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                    <a href="https://twitter.com/cldevofficial" target="_blank"><i class="fab fa-twitter"></i></a>
-                    <a href="https://discord.gg/9rCp9ydNs8" target="_blank"><i class="fab fa-discord"></i></a>
+                    <a href="https://www.instagram.com/cl_devofficial/" target="_blank"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+                    <a href="https://www.facebook.com/cldevofficial/" target="_blank"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
+                    <a href="https://twitter.com/cldevofficial" target="_blank"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+                    <a href="https://discord.gg/9rCp9ydNs8" target="_blank"><i class="fab fa-discord" aria-hidden="true"></i></a>
                     <br>
                     <!-- Mail -->
-                    <p>Support: cldevofficial@gmail.com</p>
+                    <p class="support">Support: info@giuseppecassanelli.it</p>
                 </div>
             </div>
         </footer>
 
         <!-- Script -->
-        <script src="js/slider.js"></script>
-        <script src="js/up-arrow.js"></script>
-        <script src="js/navbar.js"></script>
-        <!-- Google Analytics -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-P9MJDW83Y5"></script>
-        <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
+        <script src="./script/viewMode.js"></script>
+        <script src="./script/buttonView.js"></script>
+        <script src="./script/progressValue.js"></script>
+        <script src="./script/cookie.js"></script>
+        <script src="./script/navbar.js"></script>
+        <script src="./script/test.js"></script>
 
-            gtag('config', 'G-P9MJDW83Y5');
+        <script type="text/javascript">
+            var tema = getCookie("theme");
+            if(tema === 'dark'){
+                document.querySelector("body").classList.add("dark-mode");
+                document.querySelector(".mode").classList.add("active");
+            }
         </script>
-        <!-- Google Tag Manager (noscript) -->
-        <noscript>
-            <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M49364V"height="0" width="0" style="display:none;visibility:hidden"></iframe>
-        </noscript>
-        <!-- End Google Tag Manager (noscript) -->
 
     </body>
-</html> 
+</html>
