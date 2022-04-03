@@ -571,7 +571,7 @@ footer {
         padding: 15px;
     }
     .skill-card img{
-        width: 45px;
+        display: none;
     }
 
     .proj-setup{
@@ -602,7 +602,11 @@ footer {
         width: 150px;
         margin-top: 25px;
     }
-   
+
+    .footer-left{
+        display: none;
+    }
+
 }
 
 @media screen and (max-width: 650px) {
