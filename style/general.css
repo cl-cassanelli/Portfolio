@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Herr+Von+Muellerhoff&family=Poppins:wght@300;400;500;600;700&display=swap');
 
 /* Elementi Generali */
 *{
@@ -14,11 +14,11 @@
 /* Colori Base */
 :root{
     --bg-color: #fff;
-    --puple: #9100FF;
+    --purple: #9100FF;
     --color:#000;
     --border-button: #9100FF;
     --bg-button: rgb(145, 0, 255, 42%);
-    --bg-card: #969696;
+    --bg-card: #eee;
     --scroll-bar: #9100FF;
     --oval: #000;
 }
@@ -127,40 +127,55 @@ h4 {
     }
 }
 
-/* Progress Bar Element */
-.html{background-color: #E54C21;width: 100%;animation: w100 2s;}
-.ejs{background-color: #B4CA65;width: 100%;animation: w100 2s;}
-.css{background-color: #264DE4;width: 100%;animation: w100 2s;}
-.github{background-color: #FFFFFF;width: 100%;animation: w100 2s;}
-.office{background-color: #D83B01;width: 100%;animation: w100 2s;}
-.vscode{background-color: #34A5F1;width: 100%;animation: w100 2s;}
-.win7{background-color: #35B4E8;width: 100%;animation: w100 2s;}
-.win10{background-color: #0078D6;width: 100%;animation: w100 2s;}
-.win11{background-color: #0078D4;width: 100%;animation: w100 2s;}
-.nodejs{background-color: #026E00;width: 90%;animation: w90 2s;}
-.altervista{background-color: #FFA200;width: 90%;animation: w90 2s;}
-.npm{background-color: #CB3837;width: 90%;animation: w90 2s;}
-.js{background-color: #F7DF1E;width: 85%;animation: w85 2s;}
-.adobexd{background-color: #FF61F6;width: 80%;animation: w80 2s;}
-.macmonteray{background-color: #c22ab6;width: 80%;animation: w80 2s;}
-.git{background-color: #F05033;width: 75%;animation: w75 2s;}
-.arduino{background-color: #19989E;width: 70%;animation: w70 2s;}
-.cpp{background-color: #00599D;width: 60%;animation: w60 2s;}
-.amazon{background-color: #FFA724;width: 50%;animation: w50 2s;}
-.photoshop{background-color: #31A8FF;width: 50%;animation: w50 2s;}
-.php{background-color: #4F5D95;width: 40%;animation: w40 2s;}
-.java{background-color: #ED2025;width: 40%;animation: w40 2s;}
-.wordpress{background-color: #21759B;width: 35%;animation: w35 2s;}
-.kalilinux{background-color: #696969;width: 30%;animation: w30 2s;}
+/* Up arrow*/
+.sup-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    background-color: var(--bg-card);
+    border-radius: 100%;
+    z-index: 999;
+    cursor: pointer;
+}
+.visible{
+    visibility: visible;
+}
+.shadown{
+    box-shadow: 0px 4px 4px 0px rgb(0 0 0 / 20%);
+    transition: box-shadow 225ms;
+}
+.shadown:hover{
+    box-shadow: 0px 10px 14px 0px rgba(0,0,0,0.2);
+}
 
-@keyframes w100{0%{width: 0%;}100%{width: 100%;}}
-@keyframes w90{0%{width: 0%;}100%{width: 90%;}}
-@keyframes w85{0%{width: 0%;}100%{width: 85%;}}
-@keyframes w80{0%{width: 0%;}100%{width: 80%;}}
-@keyframes w75{0%{width: 0%;} 100%{width: 75%;}}
-@keyframes w70{0%{width: 0%;}100%{width: 70%;}}
-@keyframes w60{0%{width: 0%;}100%{width: 60%;}}
-@keyframes w50{0%{width: 0%;}100%{width: 50%;}}
-@keyframes w40{0%{width: 0%;}100%{width: 40%;}}
-@keyframes w35{0%{width: 0%;}100%{width: 35%;}}
-@keyframes w30{0%{width: 0%;}100%{width: 30%;}}
+/* Progress Bar Element */
+.html { background-color: #E54C21; }
+.ejs { background-color: #B4CA65; }
+.css { background-color: #264DE4; }
+.github { background-color: #FFFFFF; }
+.office { background-color: #D83B01; }
+.vscode { background-color: #34A5F1; }
+.win7 { background-color: #35B4E8; }
+.win10 { background-color: #0078D6; }
+.win11 { background-color: #0078D4; }
+.nodejs { background-color: #026E00; }
+.altervista { background-color: #FFA200; }
+.npm { background-color: #CB3837; }
+.js { background-color: #F7DF1E; }
+.adobexd { background-color: #FF61F6; }
+.macmonteray { background-color: #c22ab6; }
+.git { background-color: #F05033; }
+.arduino { background-color: #19989E;}
+.cpp { background-color: #00599D; }
+.amazon { background-color: #FFA724; }
+.photoshop { background-color: #31A8FF; }
+.php { background-color: #4F5D95; }
+.java { background-color: #ED2025; }
+.wordpress { background-color: #21759B; }
+.kalilinux { background-color: #696969; }

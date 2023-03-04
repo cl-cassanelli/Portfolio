@@ -10,52 +10,85 @@ nav{
     height: 10vh;
     display: flex;
     justify-content: space-between;
-    align-items: center;
     position: fixed;
     width: 100%;
     background-color: var(--bg-color);
     z-index: 999;
 }
+nav .wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+}
+#loading-bar{
+    width: 100%;
+    -webkit-appearance: none;
+    height: 5px;
+    background-color: transparent;
+    display: flex;
+    color: var(--purple);
+}
+#loading-bar::-webkit-progress-value {
+    background-color: var(--purple);
+}
+#loading-bar::-moz-progress-value {
+    background-color: var(--purple);
+}
+#loading-bar::-moz-progress-bar{
+    background: transparent;
+}
+#loading-bar::-webkit-progress-bar{
+    background: transparent;
+}
 nav .left, nav .right{
     margin: auto;
 }
-
-
 .mobile-menu{
     display: none;
 }
 .hamb {
-    justify-content: space-between;
     align-items: center;
-    flex-direction: column;
+    justify-content: flex-end;
     width: 23px;
     height: 16px;
     margin: auto;
+    cursor: pointer;
     display: none;
 }
-.hamb span {
+.bar{
     width: 23px;
     height: 2px;
-    transition: all 0.3s ease-out;
+    background-color: var(--color);
+    transition: .5s;
+    position: relative;
+}
+.bar::before, .bar::after{
+    content: "";
+    position: absolute;
+    height: inherit;
+    width: inherit;
+    transition: .5s;
     background-color: var(--color);
 }
-.hamb_span1 {
-    top: 50%;
-    position: absolute;
-    transform: rotate(45deg);
+.bar::before{
+    transform: translateY(-9px);
 }
-.hamb_span2 {
-    display: none;
+.bar::after{
+    transform: translateY(9px);
 }
-.hamb_span3 {
-    top: 50%;
-    position: absolute;
-    transform: rotate(-45deg);
-    z-index: 1;
+.hamb-active .bar{
+    transform: rotate(-360deg);
+    background-color: transparent;
+}
+.hamb-active .bar::before{
+    transform: translateY(0) rotate(45deg);
+}
+.hamb-active .bar::after{
+    transform: translateY(0) rotate(-45deg);
 }
 
 .logo{
-    font-family: "Herr Von Muellerhoff";
+    font-family: "Herr Von Muellerhoff", sans-serif !important;
     font-size: 35px;
     font-weight: 100;
     margin: 0 23px;
@@ -67,8 +100,8 @@ ul li{
 ul li a{
     color: var(--color);    
 }
-ul li a:hover{
-    color: var(--puple);
+ul li a:hover, .loghi a i:hover{
+    color: var(--purple);
 }
 .mode {
     float: right;
@@ -127,7 +160,7 @@ ul li a:hover{
     max-width: 55%;
 }
 .profile-picture{
-    border: 3px solid var(--puple);
+    border: 3px solid var(--purple);
     border-radius: 100%;
     width: 450px;
 }
@@ -138,7 +171,7 @@ ul li a:hover{
 #chisono .right h5{
     font-size: 24px;
     font-weight: 400;
-    color: var(--puple);
+    color: var(--purple);
     margin-bottom: 25px;
 }
 #chisono .right p{
@@ -147,65 +180,12 @@ ul li a:hover{
 }
 
 /* Progetti */
-#progetti{
-    height: 150vh;
+#istruzione, #contattami{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
 }
-#progetti .container{
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    padding: 0 150px;
-}
-.element{
-    width: 350px;
-    height: 225px;
-    background-color: #707070;
-    margin: 40px 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 10px;
-    opacity: 50%;
-    transition: 0.5s;
-    flex-direction: column;
-}
-.element:hover{
-    filter: blur(8px);
-}
-.bot{
-    width: 140px;
-}
-.omegle{
-    max-width: 260px;
-}
-.car-salon-bg{
-    background-image: url("../img/car-salon-bg.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-.car-salon{
-    width: 180px;
-}
-.password-grabber-bg{
-    background-image: url("../img/password-grabber-bg.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-.password-grabber{
-    width: 280px;
-}
-
 /* istruzione */
-#istruzione {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: flex-start;
-}
 .proj-setup{
     margin: auto 3%;
 }
@@ -217,8 +197,28 @@ ul li a:hover{
     font-size: 14px;
     opacity: .8;
 }
+
 .card-setup{
     margin: 45px 0;
+    --delay: 0;
+    opacity: 1;
+    transition: opacity .25s ease-in-out var(--delay);
+}
+
+#other-skills.collapsed, .collapsed{
+    height: 0;
+    overflow: hidden;
+}
+#other-skills{
+    height: 100%;
+}
+
+.hidden{
+    display: none;
+}
+#other-skills.collapsed .card-setup{
+    opacity: 0;
+    /* transition: visibility 0s, opacity 0.5s linear; */
 }
 #istruzione .container{
     margin-top: 13px;
@@ -285,9 +285,12 @@ ul li a:hover{
 }
 .arrow-icon{
     background: none;
+    font-size: 30px;
     width: 30px;
     height: 30px;
-    color: #fff;
+    color: var(--color);
+    opacity: .8;
+    transition: .5s;
 }
 .arrow-icon-reverse{
     transform: rotate(180deg);
@@ -295,7 +298,6 @@ ul li a:hover{
 /* Contact */
 .cont-card{
     width: 700px;
-    background-color: #0a0a0a;
     margin-top: 47px;
     padding: 45px 55px 35px;
     border-radius: 28px;
@@ -315,19 +317,14 @@ ul li a:hover{
 .button-ctn{
     width: 185px;
     height: 45px;
-    background-image: linear-gradient(45deg, var(--puple), #d400ff);
-    color: #000;
-    font-weight: 600;
-    border-radius: 9px;
-    cursor: pointer;
-    user-select: none;
+    font-weight: 500;
     font-size: 14px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 #name, #email, #object{
-    background-color: #0f0f0f;
+    background-color: var(--bg-color);
     width: 380px;
     border-radius: 7px;
     padding: 10px 20px;
@@ -335,6 +332,25 @@ ul li a:hover{
     height: 50px;
     border: 2px solid #707070;
     margin: 10px auto;
+    cursor: text;
+    outline: none;
+}
+#name:focus, #email:focus, #object:focus {
+    outline: none;
+}
+.input-value {
+    font-size: 13px;
+    position: absolute;
+    top: 0;
+    margin: 25px 0 0 13px;
+    padding: 0 10px;
+    background-color: var(--bg-color);
+    color: #707070;
+    transition: margin 0.2s ease-in-out;
+}
+.active {
+    margin: 0 0 0 7px;
+    background: linear-gradient(to bottom, var(--bg-card) 53%, var(--bg-color) 53% 100%);
 }
 .validate-input{
     position: relative;
@@ -366,12 +382,11 @@ ul li a:hover{
 }
 
 #object{
-    height: 100px;
-    margin-bottom: 20px;
+    height: 130px;
 }
 .email-cont{
     width: 65%;
-    background-color: rgba(0,0,0,.4);
+    background-color: var(--bg-color);
     padding: 8px 20px;
     border: 2px solid #707070;
     border-radius: 7px;
@@ -386,23 +401,11 @@ ul li a:hover{
 #button-send{
     width: 150px;
     height: 45px;
-    background-image: linear-gradient(45deg, var(--puple), #d400ff);
-    color: #000;
-    font-weight: 600;
-    border-radius: 9px;
-    cursor: pointer;
-    user-select: none;
+    font-weight: 500;
     font-size: 14px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: none;
-    margin-bottom: 18px;
 }
 
-.hidden{
-    display: none;
-}
+
 
 /* Footer */
 footer {
@@ -421,36 +424,33 @@ footer {
 .firma {
     font-family: 'Herr Von Muellerhoff', cursive;
     font-size: 40px;
-    color: #fff;
+    color: var(--color);
 }
 .footer-left .linea {
     width: 1px;
     height: 75px;
-    background-color: white;
+    background-color: var(--color);
     margin-left: 50px;
     margin-right: 50px;
 }
 .footer-left ul li {
     float: left;
-    margin-left: 25px;
-}
-.footer-left ul li a {
-    color: #fff;
+    margin: 0 0 0 25px;
 }
 .loghi a {
-    color: #fff;
+    color: var(--color);
 }
 .loghi a i {
     margin-bottom: 10px;
     margin-right: 15px;
-    color: #fff;
+    color: var(--color);
 }
 .copy {
     margin-left: 25px;
     font-size: 15px;
     font-family: 'Montserrat', sans-serif;
     margin-top: 15px;
-    color: #fff;
+    color: var(--color);
 }
 
 @media screen and (max-width: 1380px) {
@@ -477,9 +477,18 @@ footer {
 
 
 @media screen and (max-width: 890px){
-
-    .ovale{
+    .ovale, .hidden{
         display: none;
+    }
+    #other-skills.collapsed, .collapsed{
+        height: 100%;
+        overflow: visible;
+    }
+    #other-skills{
+        height: 100%;
+    }
+    #other-skills.collapsed .card-setup{
+        opacity: 1;
     }
 
     /* Navbar */
@@ -606,27 +615,52 @@ footer {
     .footer-left{
         display: none;
     }
+    
+    .loghi div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #istruzione h2{
+        font-size: 22px;
+    }
 
 }
 
 @media screen and (max-width: 650px) {
     .cont-card{
         padding: 0;
-        background-color: var(--bg-color);
+    }
+
+    .active{
+        background: var(--bg-color);
     }
 
     .cont-card p:nth-of-type(2), .email-wrapper{
         display: none;
     }
+    #istruzione h2{
+        font-size: 20px;
+    }
 }
 
 
 @media screen and (max-width: 450px) {
-    #contact{
-        display: none;
+    #chisono .right h3{
+        font-size: 33px;
     }
+
+    #name, #email, #object{
+        max-width: 300px;
+        padding: 10px 17px;
+    }
+
     #chisono img {
         width: 65%;
+    }
+    #istruzione h2{
+        font-size: 18px;
     }
 }
 
@@ -634,5 +668,38 @@ footer {
     .card-setup {
         margin: 45px 0;
     }
+
+    #name, #email, #object{
+        max-width: 250px;
+        padding: 10px 15px;
+    }
     
+}
+
+.dataValue{
+    font-size: 13px;
+    width: 100%;
+    text-align: right;
+    margin: -45px auto 25px auto;
+    padding-right: 10px;
+    color: #737373;
+    z-index: 8;
+    font-weight: 500;
+}
+.hover-hidden{
+    display: none;
+}
+.mail-hidden{
+    display: none;
+}
+
+
+.content{
+    max-width: 1140px;
+    display: flex;
+}
+.img-background{
+    width: 500px;
+    height: 300px;
+    background-color: var(--bg-card);
 }
