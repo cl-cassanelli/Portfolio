@@ -6,6 +6,8 @@
 
     $oggetto = $object."\n\nMail inviata da: ".$name; 
 
-    mail("cldevofficial@gmail.com", "Nuova mail - giuseppecassanelli.it", $oggetto);
-    
+    mail("info@giuseppecassanelli.it", "Nuova mail - giuseppecassanelli.it", $oggetto)
+
+    header("Location: /");
+
 ?>

@@ -140,7 +140,7 @@
                             <div class="container cards-closed dev-5" id="dev"></div>
                         </div>
 
-                        <!-- Software -->
+                        <!-- Software  -->
                         <div class="card-setup" style="--delay:calc(0.40s + 0.25s)">
                             <header class="mobile-header">
                                 <p>Software</p>
@@ -185,7 +185,7 @@
                 <div class="center-container">
                     <div class="cont-card">
                         <p>Scrivimi una mail</p>
-                        <form class="email-in">
+                        <form class="email-in" method="post" action="./script/php/mail.php">
 
                             <div class="validate-input">
                                 <span class='validate-input-text namejs hover-hidden'></span>
@@ -209,7 +209,7 @@
                                 <span class='validate-input-icon objectjs mail-hidden'><i class="fa-solid fa-circle-exclamation"></i></span>
                             </div>
 
-                            <input type="button" onclick="buttonClick()" class="button" id="button-send" value="Invia">
+                            <input type="submit" onclick="buttonClick()" class="button" id="button-send" value="Invia">
                             
                         </form>
                 
