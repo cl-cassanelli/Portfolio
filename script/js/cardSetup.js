@@ -1,5 +1,5 @@
 //Card content
-fetch("https://giuseppecassanelli.altervista.org/script/data.php").then(async res => {
+fetch("data.json").then(async res => {
 
   let response = await res.json()
 
@@ -7,6 +7,7 @@ fetch("https://giuseppecassanelli.altervista.org/script/data.php").then(async re
 
     let istType = element.section;
 
+    const certificationSkill = document.getElementById("certifications");
     const languages = document.getElementById("languages");
     const frontend = document.getElementById("frontend");
     const backend = document.getElementById("backend");
@@ -15,6 +16,7 @@ fetch("https://giuseppecassanelli.altervista.org/script/data.php").then(async re
     const software = document.getElementById("software");
     const operating = document.getElementById("operating");
     const other = document.getElementById("other");
+
     const templateLang = document.getElementById("language-card-template");
     const templateSkill = document.getElementById("skill-card-template");
 
@@ -30,7 +32,7 @@ fetch("https://giuseppecassanelli.altervista.org/script/data.php").then(async re
       const langEl = document.importNode(templateLang.content, true);
       const skillEl = document.importNode(templateSkill.content, true);
 
-      //Language Data
+      //Language/Certifications Data
       let langName = langEl.getElementById("language-name");
       let langLevel = langEl.getElementById("language-level");
       let langImg = langEl.getElementById("language-image");
@@ -80,6 +82,8 @@ fetch("https://giuseppecassanelli.altervista.org/script/data.php").then(async re
         operating.appendChild(skillEl.firstElementChild);
       } else if (istType == other.parentElement.children[0].children[0].textContent){
         other.appendChild(skillEl.firstElementChild);
+      }else if (istType == certificationSkill.parentElement.children[0].children[0].textContent){
+        certificationSkill.appendChild(langEl.firstElementChild);
       }
     })
   });
@@ -169,6 +173,7 @@ function cardMobile(e) {
   else if (e == "soft-6") cardBrain(e);
   else if (e == "os-7") cardBrain(e);
   else if (e == "other-8") cardBrain(e);
+  else if (e == "cert-9") cardBrain(e);
 }
 
 function cardBrain(className) {
