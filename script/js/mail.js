@@ -4,6 +4,7 @@ const inpObject = document.getElementById("object");
 
 //Input check
 function buttonClick() {
+
     var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 
     if(inpName.value == "") removeHidden("name", 0);
@@ -17,10 +18,10 @@ function buttonClick() {
     else if(inpObject.value.length < 15) removeHidden("object", 1);
     else addHidden(".objectjs");
     
-    if(inpName.value != "" && inpEmail.value != "" && email.value.match(mailformat) && object.value != ""){
+    if(inpName.value != "" && inpEmail.value != "" && email.value.match(mailformat) && inpObject.value != ""){
         setCookie("mail-send", true, 0.083);
         showHint(inpName.value, inpEmail.value, inpObject.value);
-        window.location.reload();
+        // window.location.reload();
     }
 }
 
@@ -85,6 +86,7 @@ document.querySelectorAll(".fa-solid").forEach(res => {
 //Send data to php
 function showHint(name, email, object) {
     const xhttp = new XMLHttpRequest();
-    xhttp.open("GET", "./script/php/mail.php?name=" + name + "&email=" + email + "&object=" + object);
+    // console.log("./")
+    xhttp.open("GET", "../script/php/mail.php?name=" + name + "&email=" + email + "&object=" + object);
     xhttp.send();
 }
