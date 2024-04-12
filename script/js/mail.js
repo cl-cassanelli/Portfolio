@@ -87,6 +87,6 @@ document.querySelectorAll(".fa-solid").forEach(res => {
 function showHint(name, email, object) {
     const xhttp = new XMLHttpRequest();
     // console.log("./")
-    xhttp.open("GET", "./script/php/mail.php?name=" + name + "&email=" + email + "&object=" + object);
+    xhttp.open("GET", "https://cl-cassanelli.github.io/Portfolio/script/php/mail.php?name=" + name + "&email=" + email + "&object=" + object);
     xhttp.send();
 }
