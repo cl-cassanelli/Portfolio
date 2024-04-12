@@ -16,7 +16,7 @@ fetch("data.json").then(async res => {
     const software = document.getElementById("software");
     const operating = document.getElementById("operating");
     const other = document.getElementById("other");
-
+    
     const templateLang = document.getElementById("language-card-template");
     const templateSkill = document.getElementById("skill-card-template");
 

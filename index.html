@@ -246,7 +246,7 @@
                     <li><a href="#istruzione">Istruzione</a></li>
                     <li><a href="#contattami">Contattami</a></li>
                     <br>
-                    <p class="copy">©2021 Giuseppe Cassanelli. All right reserved.</p>
+                    <p class="copy"></p>
                 </ul>
             </div>
             <div class="footer-right">
@@ -271,6 +271,14 @@
         <script src="./script/js/navbar.js"></script>
         <script src="./script/js/mail.js"></script>
         <script type="text/javascript">
+
+            function aggiornaAnno() {
+                var oggi = new Date();
+                document.querySelector(".copy").innerHTML = "&copy; " + oggi.getFullYear() + " Giuseppe Cassanelli. All right reserved.";
+            }
+            aggiornaAnno();
+            setInterval(aggiornaAnno, 1000 * 60 * 60 * 24);
+
             var tema = getCookie("theme");
             if(tema === 'dark'){
                 document.querySelector("body").classList.add("dark-mode");

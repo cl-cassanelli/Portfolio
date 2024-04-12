@@ -8,8 +8,6 @@
     $email = $_GET["email"];
     $object = $_GET["object"];
 
-    echo $object
-
     $oggetto = $object."\n\nMail inviata da: ".$name; 
 
     mail("cldevofficial@gmail.com", "Nuova mail - giuseppecassanelli.it", $oggetto);
