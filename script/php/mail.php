@@ -10,6 +10,10 @@
 
     $oggetto = $object."\n\nMail inviata da: ".$name; 
 
-    mail("cldevofficial@gmail.com", "Nuova mail - giuseppecassanelli.it", $oggetto);
+    if(mail("cldevofficial@gmail.com", "Nuova mail - giuseppecassanelli.it", $oggetto)) {
+        echo "c'è l'abbiamo fattaaaa";
+    } else {
+        echo "diocane";
+    }
 
 ?>
