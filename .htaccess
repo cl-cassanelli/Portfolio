@@ -16,3 +16,5 @@
      Header unset Cookie 
      Header unset Set-Cookie 
 </FilesMatch>
+
+Header always set Permissions-Policy "origin 'self'"
