@@ -21,7 +21,7 @@ function buttonClick() {
     if(inpName.value != "" && inpEmail.value != "" && email.value.match(mailformat) && inpObject.value != ""){
         setCookie("mail-send", true, 0.083);
         showHint(inpName.value, inpEmail.value, inpObject.value);
-        // window.location.reload();
+        window.location.reload();
     }
 }
 

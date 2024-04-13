@@ -14,11 +14,8 @@ if (isset($_SERVER['HTTP_REFERER']) && $_SERVER['HTTP_REFERER'] === $allowed_ref
 
     $oggetto = $object . "\n\nMail inviata da: " . $name;
 
-    if (mail("cldevofficial@gmail.com", "Nuova mail - giuseppecassanelli.it", $oggetto)) {
-        echo "c'è l'abbiamo fattaaaa";
-    } else {
-        echo "diocane";
-    }
+    mail("cldevofficial@gmail.com", "Nuova mail - giuseppecassanelli.it", $oggetto);
+
 } else {
     // Restituisci un errore 403 Forbidden se il referer non è autorizzato
     http_response_code(403);
