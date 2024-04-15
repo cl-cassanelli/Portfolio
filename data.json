@@ -26,6 +26,11 @@
                 "name": "Python",
                 "level": "PCEP™ Entry-Level",
                 "img": "img/cardImg/cert/pythonCert.png"
+            },
+            {
+                "name": "Cisco CCNAv7",
+                "level": "Introduction to Networks",
+                "img": "img/cardImg/cert/ciscoNetworksCert.png"
             }
         ]
     },
