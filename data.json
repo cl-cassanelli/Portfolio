@@ -149,7 +149,7 @@
             },
             {
                 "name": "Altervista",
-                "value": 90,
+                "value": 100,
                 "color": "#FFA200",
                 "img": "img/cardImg/skill/altervista.png"
             },
@@ -167,7 +167,7 @@
             },
             {
                 "name": "WordPress",
-                "value": 35,
+                "value": 100,
                 "color": "#21759B",
                 "img": "img/cardImg/skill/wordpress.png"
             }
