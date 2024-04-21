@@ -11,7 +11,6 @@ async function fetchData() {
 
 async function loadCards() {
   const data = await fetchData();
-
   data.forEach(element => {
       const isType = element.section;
       var isTypeContainer = isType.toLowerCase().replace(/\s+/g, "-");
@@ -41,7 +40,6 @@ async function loadCards() {
       }
   });
 }
-
 function addCertifications(container, template, name, level, image) {
   const cardEl = document.importNode(template.content, true);
   cardEl.getElementById("language-image").src = image;
@@ -59,67 +57,44 @@ function addSkillCard(container, template, name, value, image, color) {
   cardEl.getElementById("skill-progress").style.backgroundColor = color;
   container.appendChild(cardEl);
 }
-
 window.addEventListener("load", loadCards);
 
+let isContentExpanded = false;
+const istButton = document.getElementById("ist");
+const contentToToggle = document.querySelectorAll(".collapsed");
+istButton.addEventListener("click", () => {
+    if (!isContentExpanded) {
+        contentToToggle.forEach(element => element.classList.remove("collapsed"));
+        istButton.innerHTML = "Mostra Meno <i class=\"fas fa-chevron-up\"></i>";
+    } else {
+        contentToToggle.forEach(element => element.classList.add("collapsed"));
+        window.scrollTo({ top: document.getElementById("istruzione").offsetTop });
+        istButton.innerHTML = "Mostra Altro <i class=\"fas fa-chevron-down\"></i>";
+    }
+    isContentExpanded = !isContentExpanded;
+});
 
-var vett = []
-const istbutton = document.getElementById("ist")
-istbutton.addEventListener("click", () => {
-  if (istbutton.innerHTML == "Mostra Altro <i class=\"fas fa-chevron-down\" aria-hidden=\"true\"></i>") {
-      document.querySelectorAll(".collapsed").forEach(res => {
-          res.classList.remove("collapsed");
-          vett.push(res);
-      })
-      istbutton.innerHTML = "Mostra Meno <i class=\"fas fa-chevron-up\"></i>"
-  } else {
-      vett.map(res => {
-          res.classList.add("collapsed");
-      })
-      const offset = document.getElementById("istruzione");
-      scrollTo({ top: offset.offsetTop - offset.scrollTop + offset.clientTop })
-      istbutton.innerHTML = "Mostra Altro <i class=\"fas fa-chevron-down\">"
-  }
-})
+function animateProgressBar(element) {
+    let progressValue = 0;
+    let value = parseInt(element.querySelector("#skill-value").textContent);
+    let progressBar = element.querySelector("#skill-progress");
 
-function scroll(res) {
-
-  let value = 0;
-
-  value = res.children[1].children[1].children[1].innerHTML.split("%")[0];
-
-  let progressValue = 0;
-  let progressEndValue = value;
-
-  let progress = setInterval(() => {
-      progressValue++;
-      res.children[1].children[1].children[1].textContent = `${progressValue}%`;
-      res.children[1].children[1].children[0].children[0].style.width = `${progressValue}%`
-      if (progressValue == progressEndValue) {
-          clearInterval(progress);
-      }
-  }, 25);
-
+    let progress = setInterval(() => {
+        progressValue++;
+        element.querySelector("#skill-value").innerHTML = `${progressValue}%`;
+        progressBar.style.width = `${progressValue}%`;
+        if(progressValue >= value) clearInterval(progress);
+    }, 25);
 }
+
 document.addEventListener('scroll', function () {
-
-  let skill = document.querySelectorAll(".skill-card");
-
-  skill.forEach(res => {
-
-      var heigth = res.offsetTop - res.scrollTop + res.clientTop
-
-      if (window.scrollY + document.documentElement.clientHeight >= heigth) {
-          if (heigth != 0) {
-              if (!res.classList.contains("loaded")) {
-                  res.classList.add("loaded")
-                  scroll(res);
-              }
-          }
-
-      }
-  })
-
+    let skills = document.querySelectorAll(".skill-card");
+    skills.forEach(skill => {
+        if (skill.getBoundingClientRect().top <= window.innerHeight && !skill.classList.contains("loaded")) {
+            skill.classList.add("loaded");
+            animateProgressBar(skill);
+        }
+    });
 });
 
 // Card Mobile
