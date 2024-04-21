@@ -4,10 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="../style/general.css">
     <link rel="stylesheet" href="../style/error.css">
 
-    <title>Document</title>
+    <title>408 - Request Time-Out</title>
 </head>
 <body>
 
@@ -17,14 +18,9 @@
         <h3>Spiacenti, la richiesta inviata dal client al server ha richiesto più tempo del previsto.<br>Controlla l'URL o <a href="/">ritorna alla home page</a>.</h3>
     </div>
 
-    <script src="../script/cookie.js"></script>
+    <script src="../script/js/cookie.js"></script>
     <script type="text/javascript">
-
-        var tema = getCookie("theme");
-
-        if(tema === 'dark'){
-            document.querySelector("body").classList.add("dark-mode");
-        }
+        if(getCookie("theme") === 'dark') document.querySelector("body").classList.add("dark-mode");
     </script>
     
 </body>
