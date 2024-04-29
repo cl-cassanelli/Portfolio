@@ -86,6 +86,16 @@ document.querySelectorAll(".fa-solid").forEach(res => {
 //Send data to php
 function showHint(name, email, object) {
     const xhttp = new XMLHttpRequest();
-    xhttp.open("GET", "https://giuseppecassanelli.altervista.org/data/mail.php?name=" + name + "&email=" + email + "&object=" + object);
-    xhttp.send();
+    const url = "https://giuseppecassanelli.altervista.org/data/mail.php";
+    const params = "name=" + name + "&email=" + email + "&object=" + object;
+    
+    xhttp.onreadystatechange = function() {
+        if (this.readyState === 4 && this.status === 200) {
+            console.log("Dati inviati con successo");
+        }
+    };
+
+    xhttp.open("POST", url, true);
+    xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    xhttp.send(params);
 }
