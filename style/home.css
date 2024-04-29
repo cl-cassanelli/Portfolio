@@ -350,7 +350,7 @@ ul li a:hover, .loghi a i:hover{
 }
 .active {
     margin: 0 0 0 7px;
-    background: linear-gradient(to bottom, var(--bg-card) 53%, var(--bg-color) 53% 100%);
+    background: var(--bg-color);
 }
 .validate-input{
     position: relative;
