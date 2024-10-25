@@ -16,15 +16,9 @@ function toggleTheme() {
     const newTheme = currentTheme === "light" ? "dark" : "light";
     html.setAttribute("data-theme", newTheme);
 
-    if (newTheme === "dark") {
-        body.classList.add("dark-mode");
-        mode.classList.add("active");
-        setCookie("theme", "dark", 365);
-    } else {
-        body.classList.remove("dark-mode");
-        mode.classList.remove("active");
-        setCookie("theme", "", 365);
-    }
+    newTheme === "dark" ? body.classList.add("dark-mode") : body.classList.remove("dark-mode");
+    newTheme === "dark" ? mode.classList.add("active") : mode.classList.remove("active");
+    newTheme === "dark" ? setCookie("theme", "dark", 365) : setCookie("theme", "", 365);
 };
 
 const topButton = document.querySelector('.sup-container');

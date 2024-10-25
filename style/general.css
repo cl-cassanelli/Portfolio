@@ -14,13 +14,14 @@
 /* Colori Base */
 :root{
     --bg-color: #fff;
-    --purple: #9100FF;
     --color:#000;
+    --bg-card: #eee;
+    --oval: #000;
+
+    --purple: #9100FF;
     --border-button: #9100FF;
     --bg-button: rgb(145, 0, 255, 42%);
-    --bg-card: #eee;
     --scroll-bar: #9100FF;
-    --oval: #000;
 }
 
 /* Colori DarkMode*/
@@ -153,29 +154,3 @@ h4 {
 .shadown:hover{
     box-shadow: 0px 10px 14px 0px rgba(0,0,0,0.2);
 }
-
-/* Progress Bar Element */
-.html { background-color: #E54C21; }
-.ejs { background-color: #B4CA65; }
-.css { background-color: #264DE4; }
-.github { background-color: #FFFFFF; }
-.office { background-color: #D83B01; }
-.vscode { background-color: #34A5F1; }
-.win7 { background-color: #35B4E8; }
-.win10 { background-color: #0078D6; }
-.win11 { background-color: #0078D4; }
-.nodejs { background-color: #026E00; }
-.altervista { background-color: #FFA200; }
-.npm { background-color: #CB3837; }
-.js { background-color: #F7DF1E; }
-.adobexd { background-color: #FF61F6; }
-.macmonteray { background-color: #c22ab6; }
-.git { background-color: #F05033; }
-.arduino { background-color: #19989E;}
-.cpp { background-color: #00599D; }
-.amazon { background-color: #FFA724; }
-.photoshop { background-color: #31A8FF; }
-.php { background-color: #4F5D95; }
-.java { background-color: #ED2025; }
-.wordpress { background-color: #21759B; }
-.kalilinux { background-color: #696969; }
