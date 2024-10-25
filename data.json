@@ -1,6 +1,7 @@
 [
     {
         "section": "Languages",
+        "class": "languages-class",
         "entries": [
             {
                 "name": "Italiano",
@@ -17,10 +18,12 @@
                 "level": "Conoscenze Informali",
                 "img": "img/cardImg/lang/fr.png"
             }
-        ]
+        ],
+        "showMore": false
     },
     {
         "section": "Certifications",
+        "class": "certifications-class",
         "entries": [
             {
                 "name": "Python",
@@ -37,10 +40,12 @@
                 "level": "Full Standard",
                 "img": "img/cardImg/cert/icdlFullStandard.png"
             }
-        ]
+        ],
+        "showMore": false
     },
     {
         "section": "Frontend development",
+        "class": "frontend-class",
         "entries": [
             {
                 "name": "HTML 5",
@@ -66,10 +71,12 @@
                 "color": "#F7DF1E",
                 "img": "img/cardImg/skill/javascript.png"
             }
-        ]
+        ],
+        "showMore": false
     },
     {
         "section": "Backend development",
+        "class":"backend-class",
         "entries": [
             {
                 "name": "Node.js",
@@ -83,7 +90,8 @@
                 "color": "#4F5D95",
                 "img": "img/cardImg/skill/php.png"
             }
-        ]
+        ],
+        "showMore": false
     },
     {
         "section": "Software development",
@@ -105,8 +113,15 @@
                 "value": 40,
                 "color": "#ED2025",
                 "img": "img/cardImg/skill/java.png"
+            },
+            {
+                "name": "C#",
+                "value": 20,
+                "color": "#a27add",
+                "img": "img/cardImg/skill/c-sharp.png"
             }
-        ]
+        ],
+        "showMore": true
     },
     {
         "section": "Dev technologies",
@@ -135,7 +150,8 @@
                 "color": "#FFA724",
                 "img": "img/cardImg/skill/amazon.png"
             }
-        ]
+        ],
+        "showMore": true
     },
     {
         "section": "Software",
@@ -176,7 +192,20 @@
                 "color": "#21759B",
                 "img": "img/cardImg/skill/wordpress.png"
             }
-        ]
+        ],
+        "showMore": true
+    },
+    {
+        "section": "Design and Graphics Tools",
+        "entries": [
+            {
+                "name": "Office 365",
+                "value": 100,
+                "color": "#D83B01",
+                "img": "img/cardImg/skill/office365.png"
+            }
+        ],
+        "showMore": true
     },
     {
         "section": "Operating systems",
@@ -211,7 +240,8 @@
                 "color": "#696969",
                 "img": "img/cardImg/skill/kalilinux.png"
             }
-        ]
+        ],
+        "showMore": true
     },
     {
         "section": "Other technologies",
@@ -222,6 +252,7 @@
                 "color": "#075b8a",
                 "img": "img/cardImg/skill/ajax.png"
             }
-        ]
+        ],
+        "showMore": true
     }
 ]

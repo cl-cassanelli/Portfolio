@@ -1,61 +1,104 @@
 async function fetchData() {
-  try {
-      const response = await fetch("data.json");
-      const data = await response.json();
-      return data;
-  } catch (error) {
-      console.error("Errore nel recupero dei dati:", error);
-      return [];
-  }
+    try {
+        const response = await fetch("data.json");
+        const data = await response.json();
+        return data;
+    } catch (error) {
+        console.error("Errore nel recupero dei dati:", error);
+        return [];
+    }
 }
 
 async function loadCards() {
-  const data = await fetchData();
-  data.forEach(element => {
-      const isType = element.section;
-      var isTypeContainer = isType.toLowerCase().replace(/\s+/g, "-");
-      const container = document.getElementById(isTypeContainer);
+    const data = await fetchData();
+    data.forEach(element => {
+        const isType = element.section;
+        var isTypeContainer = isType.toLowerCase().replace(/\s+/g, "-");
 
-      if (isTypeContainer === "languages" || isTypeContainer === "certifications") {
-          element.entries.forEach(entry => {
-              addCertifications(
-                  container,
-                  document.getElementById("language-card-template"),
-                  entry.name,
-                  entry.level,
-                  entry.img,
-              );
-          });
-      } else {
-          element.entries.forEach(entry => {
-              addSkillCard(
-                  container,
-                  document.getElementById("skill-card-template"),
-                  entry.name,
-                  entry.value.toString() + "%",
-                  entry.img,
-                  entry.color
-              );
-          });
-      }
+        var container = document.getElementById(isTypeContainer);
+        if (!container) {
+            createCardContainer(isType, element.class);
+            container = document.getElementById(isTypeContainer);
+        }
+
+        if (isTypeContainer === "languages" || isTypeContainer === "certifications") {
+            element.entries.forEach(entry => {
+                addCertifications(
+                    container,
+                    document.getElementById("language-card-template"),
+                    entry.name,
+                    entry.level,
+                    entry.img,
+                );
+            });
+        } else {
+            element.entries.forEach(entry => {
+                addSkillCard(
+                    container,
+                    document.getElementById("skill-card-template"),
+                    entry.name,
+                    entry.value.toString() + "%",
+                    entry.img,
+                    entry.color
+                );
+            });
+        }
   });
 }
+
+function createCardContainer(isType, elementClass) {
+    const projSetup = document.querySelector(".proj-setup");
+    const cardSetup = document.createElement("div");
+    cardSetup.classList.add("card-setup");
+
+    // Mobile
+    const mobileHeader = document.createElement("header");
+    mobileHeader.classList.add("mobile-header");
+
+    const subtitle = document.createElement("p");
+    subtitle.classList.add("subtitle");
+    subtitle.innerHTML = isType;
+
+    const openButton = document.createElement("button");
+    openButton.onclick = () => cardBrain(elementClass);
+    openButton.innerHTML = 
+    `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="arrow-icon ${elementClass}">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 13l-3 3m0 0l-3-3m3 3V8m0 13a9 9 0 110-18 9 9 0 010 18z"></path>
+    </svg>`;
+
+    mobileHeader.appendChild(subtitle);
+    mobileHeader.appendChild(openButton);
+
+    // Desktop
+    const cardsContainer = document.createElement("div");
+    cardsContainer.classList.add("container", "cards-closed", elementClass);
+    cardsContainer.id = isType.toLowerCase().replace(/\s+/g, "-");
+
+    // Aggiungo i blocchi Mobile e Desktop
+    cardSetup.appendChild(mobileHeader);
+    cardSetup.appendChild(cardsContainer);
+
+    // Aggiungo la card al container
+    projSetup.appendChild(cardSetup);
+}
+
+
 function addCertifications(container, template, name, level, image) {
-  const cardEl = document.importNode(template.content, true);
-  cardEl.getElementById("language-image").src = image;
-  cardEl.getElementById("language-image").alt = name;
-  cardEl.getElementById("language-name").textContent = name;
-  cardEl.getElementById("language-level").textContent = level;
-  container.appendChild(cardEl);
+    const cardEl = document.importNode(template.content, true);
+    cardEl.getElementById("language-image").src = image;
+    cardEl.getElementById("language-image").alt = name;
+    cardEl.getElementById("language-name").textContent = name;
+    cardEl.getElementById("language-level").textContent = level;
+    container.appendChild(cardEl);
 }
 function addSkillCard(container, template, name, value, image, color) {
-  const cardEl = document.importNode(template.content, true);
-  cardEl.getElementById("skill-image").src = image;
-  cardEl.getElementById("skill-image").alt = name;
-  cardEl.getElementById("skill-name").textContent = name;
-  cardEl.getElementById("skill-value").textContent = value;
-  cardEl.getElementById("skill-progress").style.backgroundColor = color;
-  container.appendChild(cardEl);
+    const cardEl = document.importNode(template.content, true);
+    cardEl.getElementById("skill-image").src = image;
+    cardEl.getElementById("skill-image").alt = name;
+    cardEl.getElementById("skill-name").textContent = name;
+    cardEl.getElementById("skill-value").textContent = value;
+    cardEl.getElementById("skill-progress").style.backgroundColor = color;
+    container.appendChild(cardEl);
 }
 window.addEventListener("load", loadCards);
 
@@ -83,7 +126,7 @@ function animateProgressBar(element) {
         progressValue++;
         element.querySelector("#skill-value").innerHTML = `${progressValue}%`;
         progressBar.style.width = `${progressValue}%`;
-        if(progressValue >= value) clearInterval(progress);
+        if (progressValue >= value) clearInterval(progress);
     }, 25);
 }
 
@@ -97,29 +140,14 @@ document.addEventListener('scroll', function () {
     });
 });
 
-// Card Mobile
-function cardMobile(e) {
-  const classList = [
-      "lang-1",
-      "front-2",
-      "back-3",
-      "soft-4",
-      "dev-5",
-      "soft-6",
-      "os-7",
-      "other-8",
-      "cert-9"
-  ];
-  if (classList.includes(e)) cardBrain(e); 
-}
 
 function cardBrain(className) {
-  document.querySelectorAll(".arrow-icon").forEach(res => {
-      if (res.classList.contains(className)) res.classList.toggle("arrow-icon-reverse")
-      else res.classList.remove("arrow-icon-reverse")
-  });
-  document.querySelectorAll("#istruzione .container").forEach(res => {
-      if (res.classList.contains(className)) res.classList.toggle("cards-closed")
-      else res.classList.add("cards-closed")
-  });
+    document.querySelectorAll(".arrow-icon").forEach(res => {
+        if (res.classList.contains(className)) res.classList.toggle("arrow-icon-reverse")
+        else res.classList.remove("arrow-icon-reverse")
+    });
+    document.querySelectorAll("#istruzione .container").forEach(res => {
+        if (res.classList.contains(className)) res.classList.toggle("cards-closed")
+        else res.classList.add("cards-closed")
+    });
 }
