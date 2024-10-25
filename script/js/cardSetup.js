@@ -15,9 +15,11 @@ async function loadCards() {
         const isType = element.section;
         var isTypeContainer = isType.toLowerCase().replace(/\s+/g, "-");
 
+        var section = element.showMore;
+
         var container = document.getElementById(isTypeContainer);
         if (!container) {
-            createCardContainer(isType, element.class);
+            createCardContainer(section, isType, element.class);
             container = document.getElementById(isTypeContainer);
         }
 
@@ -26,8 +28,19 @@ async function loadCards() {
   });
 }
 
-function createCardContainer(isType, elementClass) {
+function createCardContainer(section, isType, elementClass) {
     const projSetup = document.querySelector(".proj-setup");
+    var container;
+
+    if(section) {
+        const collapsed = document.createElement("div");
+        collapsed.classList.add("collapsed");
+        collapsed.id = "other-skills";
+        projSetup.appendChild(collapsed);
+
+        container = document.querySelector(".collapsed");
+    } else container = projSetup;
+
     const cardSetup = document.createElement("div");
     cardSetup.classList.add("card-setup");
 
@@ -58,7 +71,7 @@ function createCardContainer(isType, elementClass) {
     cardSetup.append(mobileHeader, cardsContainer);
 
     // Aggiungo la card al container
-    projSetup.appendChild(cardSetup);
+    container.appendChild(cardSetup);
 }
 
 
@@ -85,13 +98,13 @@ window.addEventListener("load", loadCards);
 
 let isContentExpanded = false;
 const istButton = document.getElementById("ist");
-const contentToToggle = document.querySelectorAll(".collapsed");
 istButton.addEventListener("click", () => {
+    const contentToToggle = document.querySelector("#other-skills");
     if (!isContentExpanded) {
-        contentToToggle.forEach(element => element.classList.remove("collapsed"));
+        contentToToggle.classList.remove("collapsed");
         istButton.innerHTML = "Mostra Meno <i class=\"fas fa-chevron-up\"></i>";
     } else {
-        contentToToggle.forEach(element => element.classList.add("collapsed"));
+        contentToToggle.classList.add("collapsed");
         window.scrollTo({ top: document.getElementById("istruzione").offsetTop });
         istButton.innerHTML = "Mostra Altro <i class=\"fas fa-chevron-down\"></i>";
     }
