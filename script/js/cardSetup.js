@@ -21,28 +21,8 @@ async function loadCards() {
             container = document.getElementById(isTypeContainer);
         }
 
-        if (isTypeContainer === "languages" || isTypeContainer === "certifications") {
-            element.entries.forEach(entry => {
-                addCertifications(
-                    container,
-                    document.getElementById("language-card-template"),
-                    entry.name,
-                    entry.level,
-                    entry.img,
-                );
-            });
-        } else {
-            element.entries.forEach(entry => {
-                addSkillCard(
-                    container,
-                    document.getElementById("skill-card-template"),
-                    entry.name,
-                    entry.value.toString() + "%",
-                    entry.img,
-                    entry.color
-                );
-            });
-        }
+        const addCard = isTypeContainer === "languages" || isTypeContainer === "certifications" ? addCertifications : addSkillCard;
+        element.entries.forEach(entry => addCard(container, entry));
   });
 }
 
@@ -75,25 +55,26 @@ function createCardContainer(isType, elementClass) {
     cardsContainer.id = isType.toLowerCase().replace(/\s+/g, "-");
 
     // Aggiungo i blocchi Mobile e Desktop
-    cardSetup.appendChild(mobileHeader);
-    cardSetup.appendChild(cardsContainer);
+    cardSetup.append(mobileHeader, cardsContainer);
 
     // Aggiungo la card al container
     projSetup.appendChild(cardSetup);
 }
 
 
-function addCertifications(container, template, name, level, image) {
-    const cardEl = document.importNode(template.content, true);
-    cardEl.getElementById("language-image").src = image;
+function addCertifications(container, { name, level, img }) {
+    const template = document.getElementById("language-card-template").content;
+    const cardEl = document.importNode(template, true);
+    cardEl.getElementById("language-image").src = img;
     cardEl.getElementById("language-image").alt = name;
     cardEl.getElementById("language-name").textContent = name;
     cardEl.getElementById("language-level").textContent = level;
     container.appendChild(cardEl);
 }
-function addSkillCard(container, template, name, value, image, color) {
-    const cardEl = document.importNode(template.content, true);
-    cardEl.getElementById("skill-image").src = image;
+function addSkillCard(container, { name, value, img, color }) {
+    const template = document.getElementById("skill-card-template").content;
+    const cardEl = document.importNode(template, true);
+    cardEl.getElementById("skill-image").src = img;
     cardEl.getElementById("skill-image").alt = name;
     cardEl.getElementById("skill-name").textContent = name;
     cardEl.getElementById("skill-value").textContent = value;
