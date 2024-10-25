@@ -45,7 +45,7 @@
     },
     {
         "section": "Frontend development",
-        "class": "frontend-class",
+        "class": "frontend-development-class",
         "entries": [
             {
                 "name": "HTML 5",
@@ -76,7 +76,7 @@
     },
     {
         "section": "Backend development",
-        "class":"backend-class",
+        "class": "backend-development-class",
         "entries": [
             {
                 "name": "Node.js",
@@ -95,6 +95,7 @@
     },
     {
         "section": "Software development",
+        "class": "software-development-class",
         "entries": [
             {
                 "name": "Arduino IDE",
@@ -125,6 +126,7 @@
     },
     {
         "section": "Dev technologies",
+        "class": "dev-technologies-class",
         "entries": [
             {
                 "name": "GitHub",
@@ -155,6 +157,7 @@
     },
     {
         "section": "Software",
+        "class": "software-class",
         "entries": [
             {
                 "name": "Office 365",
@@ -196,19 +199,8 @@
         "showMore": true
     },
     {
-        "section": "Design and Graphics Tools",
-        "entries": [
-            {
-                "name": "Office 365",
-                "value": 100,
-                "color": "#D83B01",
-                "img": "img/cardImg/skill/office365.png"
-            }
-        ],
-        "showMore": true
-    },
-    {
         "section": "Operating systems",
+        "class": "operating-systems-class",
         "entries": [
             {
                 "name": "Windows 11",
@@ -245,6 +237,7 @@
     },
     {
         "section": "Other technologies",
+        "class": "Other-technologies-class",
         "entries": [
             {
                 "name": "AJAX",
